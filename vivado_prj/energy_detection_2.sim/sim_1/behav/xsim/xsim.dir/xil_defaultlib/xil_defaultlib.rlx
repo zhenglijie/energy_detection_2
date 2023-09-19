@@ -3,9 +3,9 @@
 Dec 15 2017
 21:07:18
 F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
-F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sim_1/new/tb_fft.v,1695089199,verilog,,,,tb_fft,,,,,,,,
+F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sim_1/new/tb_fft.v,1695116882,verilog,,,,tb_fft,,,,,,,,
 F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/ip/counter_mod_10/sim/counter_mod_10.vhd,1694758288,vhdl,,,,counter_mod_10,,,,,,,,
 F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/ip/ram/sim/ram.v,1694767972,verilog,,F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_fft.v,,ram,,,,,,,,
 F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/ip/xfft_0/sim/xfft_0.vhd,1694836414,vhdl,,,,xfft_0,,,,,,,,
-F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_fft.v,1695091347,verilog,,F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft.v,,control_fft,,,,,,,,
-F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft.v,1695089186,verilog,,F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sim_1/new/tb_fft.v,,fft,,,,,,,,
+F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_fft.v,1695114723,verilog,,F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft.v,,control_fft,,,,,,,,
+F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft.v,1695117513,verilog,,F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sim_1/new/tb_fft.v,,fft,,,,,,,,

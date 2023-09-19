@@ -96,11 +96,11 @@ module tb_fft();
     end
     
     always @ (posedge sys_clk, posedge areset) begin
-        fd2 = $fopen("F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/matlab/result_fft_ip_unscale.txt", "a");
+        fd2 = $fopen("F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/matlab/result_fft_ip_scale.txt", "a");
         err2 = $ferror(fd2, str2);    
         //$display("error is:%s\n", str2);
         if (fft_m_out_data_tvalid)
-            $fwrite(fd, "%d\n", fft_out_data_real_abs);
+            $fwrite(fd, "%d %d\n", fft_m_out_data[15:0], fft_m_out_data[31:16]); //real, imag
         if (fft_m_out_data_tlast)
             $fclose(fd);
     end

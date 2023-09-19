@@ -66,3 +66,4 @@ for i = 1 : N
     %abs_fft_y(i)  
     fprintf(fp, '%.f\n',abs_fft_y(i));
 end
+

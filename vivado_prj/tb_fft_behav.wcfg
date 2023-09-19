@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="20299000000fs"></ZoomStartTime>
-      <ZoomEndTime time="20844000001fs"></ZoomEndTime>
-      <Cursor1Time time="20650000000fs"></Cursor1Time>
+      <ZoomStartTime time="43190000000fs"></ZoomStartTime>
+      <ZoomEndTime time="65010000001fs"></ZoomEndTime>
+      <Cursor1Time time="55610000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="201"></NameColumnWidth>
-      <ValueColumnWidth column_width="119"></ValueColumnWidth>
+      <NameColumnWidth column_width="192"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="38" />
+   <WVObjectSize size="35" />
    <wave_markers>
       <marker time="20670000000" label="" />
       <marker time="41130100000" label="" />
@@ -46,9 +46,14 @@
       <obj_property name="ObjectShortName">ram_in_data[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_fft/fft_inst/control_fft_inst/en_counter_a" type="logic">
-      <obj_property name="ElementShortName">en_counter_a</obj_property>
-      <obj_property name="ObjectShortName">en_counter_a</obj_property>
+   <wvobject fp_name="/tb_fft/fft_inst/control_fft_inst/addr" type="array">
+      <obj_property name="ElementShortName">addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft/fft_inst/control_fft_inst/ram_wr_en" type="logic">
+      <obj_property name="ElementShortName">ram_wr_en</obj_property>
+      <obj_property name="ObjectShortName">ram_wr_en</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_fft/addra" type="array">
       <obj_property name="ElementShortName">addra[9:0]</obj_property>
@@ -63,10 +68,6 @@
       <obj_property name="ElementShortName">douta[31:0]</obj_property>
       <obj_property name="ObjectShortName">douta[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft/fft_inst/control_fft_inst/tc_counter_a" type="logic">
-      <obj_property name="ElementShortName">tc_counter_a</obj_property>
-      <obj_property name="ObjectShortName">tc_counter_a</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_fft/fft_inst/xfft_0_inst/aclk" type="logic">
       <obj_property name="ElementShortName">aclk</obj_property>
@@ -100,19 +101,6 @@
    <wvobject fp_name="/tb_fft/fft_inst/xfft_0_inst/s_axis_data_tready" type="logic">
       <obj_property name="ElementShortName">s_axis_data_tready</obj_property>
       <obj_property name="ObjectShortName">s_axis_data_tready</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft/fft_inst/control_fft_inst/en_counter_b" type="logic">
-      <obj_property name="ElementShortName">en_counter_b</obj_property>
-      <obj_property name="ObjectShortName">en_counter_b</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft/fft_inst/control_fft_inst/addrb" type="array">
-      <obj_property name="ElementShortName">addrb[9:0]</obj_property>
-      <obj_property name="ObjectShortName">addrb[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_fft/fft_inst/control_fft_inst/tc_counter_b" type="logic">
-      <obj_property name="ElementShortName">tc_counter_b</obj_property>
-      <obj_property name="ObjectShortName">tc_counter_b</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_fft/fft_inst/xfft_0_inst/s_axis_data_tlast" type="logic">
       <obj_property name="ElementShortName">s_axis_data_tlast</obj_property>

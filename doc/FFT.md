@@ -174,7 +174,7 @@ $$
 
 ![image-20230914185254554](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230914185254554.png)
 
-采用原文的思路，代码，数值大小与matlab计算结果差距较大，但是趋势差不多。
+采用原文的思路，代码，数值大小与matlab计算结果差距较大。
 
 3 存在问题
 
@@ -223,4 +223,12 @@ matlab结果与fft_ip对比：
 ![image-20230919102155977](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230919102155977.png)
 
 没有缩放的结果与matlab计算结果差距较大，因为计算过程中产生了溢出。缩放后的结果*256与matlab运算结果有一点偏差，因为精度的问题。
+
+* 未运算缩放的波形：
+
+![image-20230919175817462](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230919175817462.png)
+
+* 运算缩放后的波形：
+
+![image-20230919180517200](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230919180517200.png)
 

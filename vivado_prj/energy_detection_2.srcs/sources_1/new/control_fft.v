@@ -27,7 +27,7 @@ module control_fft(
     
     //control ram
     output reg ram_wr_en,
-    output [9:0]addra,
+    output [9:0]addr,
     
     //fft
     output reg fft_s_in_data_tvalid,
@@ -38,13 +38,12 @@ module control_fft(
     input fft_m_out_data_tvalid
     );
     
-    parameter RESET_STATE = 1, LOAD_RAM_DATA = 2, LOAD_FFT_DATA = 3, FFT_PROCESSING = 4, FFT_FINISH = 5;
+    parameter RESET_STATE = 1, LOAD_FFT_DATA = 2, FFT_PROCESSING = 3, FFT_FINISH = 4;
     
     reg [3:0]present_state, next_state;
     
-    wire [9:0]addrb;
-    reg en_counter_a, en_counter_b;
-    wire tc_counter_a, tc_counter_b;
+    reg en_counter;
+    wire tc_counter;
     
     always @ (posedge clk, posedge reset) begin
         if (reset)
@@ -57,73 +56,55 @@ module control_fft(
         case(present_state)
             RESET_STATE: //1
                 if (strobe == 1'b1)
-                    next_state <= LOAD_RAM_DATA;
+                    next_state <= LOAD_FFT_DATA;
                 else
                     next_state <= RESET_STATE;
-            LOAD_RAM_DATA: //2
-                if (tc_counter_a == 1'b1) //ram full
-                    next_state <= LOAD_FFT_DATA;
-                else
-                    next_state <= LOAD_RAM_DATA;
             LOAD_FFT_DATA: //3
-                if (tc_counter_b == 1'b1) //fft load data full
+                if (tc_counter == 1'b1) //fft load data full
                     next_state <= FFT_PROCESSING;
-                else
-                    next_state <= LOAD_FFT_DATA;
             FFT_PROCESSING: //4
                 if (fft_m_out_data_tlast == 1'b1)
                     next_state <= FFT_FINISH;
-                else
-                    next_state <= FFT_PROCESSING;
             FFT_FINISH: //5
-                if (fft_s_out_data_tready == 1'b1 && strobe == 1'b1)
-                    next_state <= LOAD_RAM_DATA;
-                else
-                    next_state <= FFT_FINISH;
+                if (strobe == 1'b1 && fft_s_out_data_tready == 1'b1)
+                    next_state <= LOAD_FFT_DATA;
             default:next_state <= RESET_STATE;
         endcase
     end
     
     always @ (posedge clk, posedge reset) begin
         case(present_state) 
-            RESET_STATE: begin
-                en_counter_a <= 1'b0;
-                en_counter_b <= 1'b0;  
+            RESET_STATE: begin //1
                 fft_s_in_data_tvalid <= 1'b0;
+                en_counter <= 1'b0;
+                ram_wr_en <= 1'b0;
             end
-            LOAD_RAM_DATA: begin
-                en_counter_a <= 1'b1;
-                ram_wr_en <= 1'b1; //begin read
-            end
-            LOAD_FFT_DATA: begin
+            LOAD_FFT_DATA: begin //3
                 fft_s_in_data_tvalid <= 1'b1;
-                en_counter_b <= 1'b1;
+                en_counter <= 1'b1;
+                ram_wr_en <= 1'b1;
             end
-            //FFT_PROCESSING: begin
-                
-            //end
-            //FFT_FINISH: begin
-                
-            //end
+            FFT_PROCESSING: begin //4
+                fft_s_in_data_tvalid <= 1'b1;
+                en_counter <= 1'b1;
+                ram_wr_en <= 1'b1;
+            end
+            FFT_FINISH: begin //5
+                fft_s_in_data_tvalid <= 1'b0;
+                en_counter <= 1'b1;
+                ram_wr_en <= 1'b1;
+            end
         endcase
     end
 
-    counter_mod_10 counter_mod_10_inst_0 (
+    counter_mod_10 counter_mod_10_inst(
       .CLK(clk),    // input wire CLK
-      .CE(en_counter_a),      // input wire CE
+      .CE(en_counter),      // input wire CE
       .SCLR(reset),  // input wire SCLR
-      .Q(addra)        // output wire [9 : 0] Q
+      .Q(addr)        // output wire [9 : 0] Q
     );
     
-    counter_mod_10 counter_mod_10_inst_1 (
-      .CLK(clk),    // input wire CLK
-      .CE(en_counter_b),      // input wire CE
-      .SCLR(reset),  // input wire SCLR
-      .Q(addrb)        // output wire [9 : 0] Q
-    );
-    
-    assign tc_counter_a = addra[0] & addra[1] & addra[2] & addra[3] & addra[4] & addra[5] & addra[6] & addra[7] & addra[8] & addra[9];
-    assign tc_counter_b = addrb[0] & addrb[1] & addrb[2] & addrb[3] & addrb[4] & addrb[5] & addrb[6] & addrb[7] & addrb[8] & addrb[9];
-    assign fft_s_in_data_tlast = addrb[0] & addrb[1] & addrb[2] & addrb[3] & addrb[4] & addrb[5] & addrb[6] & addrb[7] & addrb[8] & addrb[9];
+    assign tc_counter = addr[0] & addr[1] & addr[2] & addr[3] & addr[4] & addr[5] & addr[6] & addr[7] & addr[8] & addr[9];
+    assign fft_s_in_data_tlast = addr[0] & addr[1] & addr[2] & addr[3] & addr[4] & addr[5] & addr[6] & addr[7] & addr[8] & addr[9];
     
 endmodule

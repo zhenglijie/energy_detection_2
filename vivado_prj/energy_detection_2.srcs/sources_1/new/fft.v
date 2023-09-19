@@ -47,8 +47,8 @@ module fft(
     
     //fft signals
     wire [10:0]s_axis_config_tdata;
-    //assign s_axis_config_tdata = 15'b0000_01_10_00_11_10_1;
-    assign s_axis_config_tdata = 15'b0000_00_00_00_00_00_1;
+    assign s_axis_config_tdata = 11'b01_10_00_11_10_1;
+    //assign s_axis_config_tdata = 11'b00_00_00_00_00_1;
     
     wire s_axis_config_tready;
     //wire [31:0] fft_s_in_data;
@@ -110,7 +110,7 @@ module fft(
         
         //control ram
         .ram_wr_en(wea),
-        .addra(addra),
+        .addr(addra),
         
         //fft
         .fft_s_in_data_tvalid(fft_s_in_data_tvalid),
