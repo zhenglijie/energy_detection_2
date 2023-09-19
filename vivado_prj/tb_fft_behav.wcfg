@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="85526666666fs"></ZoomStartTime>
-      <ZoomEndTime time="108906666667fs"></ZoomEndTime>
-      <Cursor1Time time="105010000000fs"></Cursor1Time>
+      <ZoomStartTime time="20299000000fs"></ZoomStartTime>
+      <ZoomEndTime time="20844000001fs"></ZoomEndTime>
+      <Cursor1Time time="20650000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="201"></NameColumnWidth>
-      <ValueColumnWidth column_width="189"></ValueColumnWidth>
+      <ValueColumnWidth column_width="119"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="36" />
+   <WVObjectSize size="38" />
    <wave_markers>
       <marker time="20670000000" label="" />
       <marker time="41130100000" label="" />
@@ -194,5 +194,13 @@
    <wvobject fp_name="/tb_fft/fft_inst/xfft_0_inst/event_data_out_channel_halt" type="logic">
       <obj_property name="ElementShortName">event_data_out_channel_halt</obj_property>
       <obj_property name="ObjectShortName">event_data_out_channel_halt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft/fft_m_out_data_tlast" type="logic">
+      <obj_property name="ElementShortName">fft_m_out_data_tlast</obj_property>
+      <obj_property name="ObjectShortName">fft_m_out_data_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft/fft_inst/control_fft_inst/present_state" type="array">
+      <obj_property name="ElementShortName">present_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">present_state[3:0]</obj_property>
    </wvobject>
 </wave_config>

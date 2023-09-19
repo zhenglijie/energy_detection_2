@@ -75,7 +75,7 @@ module control_fft(
                     next_state <= FFT_FINISH;
                 else
                     next_state <= FFT_PROCESSING;
-            FFT_FINISH: //4
+            FFT_FINISH: //5
                 if (fft_s_out_data_tready == 1'b1 && strobe == 1'b1)
                     next_state <= LOAD_RAM_DATA;
                 else
