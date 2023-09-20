@@ -31,7 +31,7 @@ module tb_fft();
     //read
     initial begin
         #10
-        fd = $fopen("F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection/matlab/data_before_fft.txt", "r");
+        fd = $fopen("F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection/matlab/FFT_Test/data_before_fft.txt", "r");
         for (i = 0; i < 1024; i = i + 1) begin
             code = $fscanf(fd, "%d", time_domain[i]);
         end
@@ -95,14 +95,14 @@ module tb_fft();
             
     end
     
-    always @ (posedge sys_clk, posedge areset) begin
-        fd2 = $fopen("F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/matlab/result_fft_ip_scale.txt", "a");
-        err2 = $ferror(fd2, str2);    
-        //$display("error is:%s\n", str2);
-        if (fft_m_out_data_tvalid)
-            $fwrite(fd, "%d %d\n", fft_m_out_data[15:0], fft_m_out_data[31:16]); //real, imag
-        if (fft_m_out_data_tlast)
-            $fclose(fd);
-    end
+//    always @ (posedge sys_clk, posedge areset) begin
+//        fd2 = $fopen("F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/matlab/FFT_Test/result_fft_ip_unscale.txt", "a");
+//        err2 = $ferror(fd2, str2);    
+//        //$display("error is:%s\n", str2);
+//        if (fft_m_out_data_tvalid)
+//            $fwrite(fd, "%d %d\n", fft_m_out_data[15:0], fft_m_out_data[31:16]); //real, imag
+//        if (fft_m_out_data_tlast)
+//            $fclose(fd);
+//    end
         
 endmodule

@@ -1,0 +1,1 @@
+-wto "adc9240614cb4e4398c3a52524468b6d" --incr --debug "typical" --relax --mt "2" -L "xbip_utils_v3_0_8" -L "xbip_pipe_v3_0_4" -L "xbip_bram18k_v3_0_4" -L "mult_gen_v12_0_13" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "tb_multiplier_behav" "xil_defaultlib.tb_multiplier" "xil_defaultlib.glbl" -log "elaborate.log" 

@@ -47,8 +47,8 @@ module fft(
     
     //fft signals
     wire [10:0]s_axis_config_tdata;
-    assign s_axis_config_tdata = 11'b01_10_00_11_10_1;
-    //assign s_axis_config_tdata = 11'b00_00_00_00_00_1;
+    //assign s_axis_config_tdata = 11'b01_10_00_11_10_1;    //scale
+    assign s_axis_config_tdata = 11'b00_00_00_00_00_1;      //unscale
     
     wire s_axis_config_tready;
     //wire [31:0] fft_s_in_data;

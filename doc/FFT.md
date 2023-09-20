@@ -218,11 +218,13 @@ $$
 
 配置`s_axis_config_tdata = 11'b01_10_00_11_10_1`，表示各级运算缩放2，4， 1， 8， 2倍。将fft结果缩放了$2 \times 4 \times 1 \times 8 \times 2 = 256$倍，看峰值：
 
-matlab结果与fft_ip对比：
+**matlab结果与fft_ip对比：**
 
-![image-20230919102155977](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230919102155977.png)
+![image-20230920092355608](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230920092355608.png)
 
 没有缩放的结果与matlab计算结果差距较大，因为计算过程中产生了溢出。缩放后的结果*256与matlab运算结果有一点偏差，因为精度的问题。
+
+**FFT运算结果图（实部）**
 
 * 未运算缩放的波形：
 
@@ -231,4 +233,10 @@ matlab结果与fft_ip对比：
 * 运算缩放后的波形：
 
 ![image-20230919180517200](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230919180517200.png)
+
+* matlab波形：
+
+![image-20230920093151942](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230920093151942.png)
+
+### 2023.9.20 Square Magnitude Module
 

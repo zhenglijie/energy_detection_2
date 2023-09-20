@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../energy_detection_2.srcs/sources_1/ip/adder/sim/adder.vhd" \
+
+nosort
