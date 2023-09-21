@@ -122,7 +122,7 @@ BEGIN
       C_XDEVICEFAMILY => "zynq",
       C_HAS_CE => 0,
       C_HAS_SCLR => 1,
-      C_LATENCY => 5,
+      C_LATENCY => 1,
       C_A_WIDTH => 16,
       C_A_TYPE => 0,
       C_B_WIDTH => 16,

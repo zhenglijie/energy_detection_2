@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../energy_detection_2.srcs/sources_1/ip/adder/sim/adder.vhd" \
+"../../../../energy_detection_2.srcs/sources_1/ip/multiplier/sim/multiplier.vhd" \
+
+# Do not sort compile order
+nosort

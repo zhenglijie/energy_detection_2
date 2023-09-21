@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_fft_and_square_mag_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_fft_and_square_mag" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="43485883000fs"></ZoomStartTime>
+      <ZoomEndTime time="43716283001fs"></ZoomEndTime>
+      <Cursor1Time time="43530100000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="134"></NameColumnWidth>
+      <ValueColumnWidth column_width="110"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/tb_fft_and_square_mag/time_domain" type="array">
+      <obj_property name="ElementShortName">time_domain[1023:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">time_domain[1023:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/sys_clk" type="logic">
+      <obj_property name="ElementShortName">sys_clk</obj_property>
+      <obj_property name="ObjectShortName">sys_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/areset" type="logic">
+      <obj_property name="ElementShortName">areset</obj_property>
+      <obj_property name="ObjectShortName">areset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/fd" type="array">
+      <obj_property name="ElementShortName">fd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/strobe" type="logic">
+      <obj_property name="ElementShortName">strobe</obj_property>
+      <obj_property name="ObjectShortName">strobe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/addra" type="array">
+      <obj_property name="ElementShortName">addra[9:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/ram_in_data" type="array">
+      <obj_property name="ElementShortName">ram_in_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_in_data[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/fft_m_out_data" type="array">
+      <obj_property name="ElementShortName">fft_m_out_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fft_m_out_data[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/fft_m_out_data_tlast" type="logic">
+      <obj_property name="ElementShortName">fft_m_out_data_tlast</obj_property>
+      <obj_property name="ObjectShortName">fft_m_out_data_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/fft_m_out_data_tvalid" type="logic">
+      <obj_property name="ElementShortName">fft_m_out_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">fft_m_out_data_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/square_mag_inst/xk_re" type="array">
+      <obj_property name="ElementShortName">xk_re[15:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_re[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/square_mag_inst/xk_re_sq" type="array">
+      <obj_property name="ElementShortName">xk_re_sq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_re_sq[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/square_mag_inst/xk_im" type="array">
+      <obj_property name="ElementShortName">xk_im[15:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_im[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/square_mag_inst/xk_im_sq" type="array">
+      <obj_property name="ElementShortName">xk_im_sq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_im_sq[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/square_mag_inst/xk_sq_m" type="array">
+      <obj_property name="ElementShortName">xk_sq_m[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_sq_m[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/dv_sq_m" type="logic">
+      <obj_property name="ElementShortName">dv_sq_m</obj_property>
+      <obj_property name="ObjectShortName">dv_sq_m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_and_square_mag/square_mag_inst/dv_fft" type="logic">
+      <obj_property name="ElementShortName">dv_fft</obj_property>
+      <obj_property name="ObjectShortName">dv_fft</obj_property>
+   </wvobject>
+</wave_config>

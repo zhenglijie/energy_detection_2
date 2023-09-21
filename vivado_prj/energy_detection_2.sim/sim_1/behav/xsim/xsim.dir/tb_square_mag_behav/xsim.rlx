@@ -1,0 +1,12 @@
+
+{ 
+    crc :  3335504863135137273  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto adc9240614cb4e4398c3a52524468b6d --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_8 -L c_reg_fd_v12_0_4 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_4 -L xbip_dsp48_addsub_v3_0_4 -L xbip_addsub_v3_0_4 -L c_addsub_v12_0_11 -L xil_defaultlib -L xbip_bram18k_v3_0_4 -L mult_gen_v12_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_square_mag_behav xil_defaultlib.tb_square_mag xil_defaultlib.glbl" , 
+    buildDate : "Dec 15 2017" , 
+    buildTime : "21:07:18" , 
+    linkCmd : "F:\\Xilinx\\Vivado\\2017.4\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/tb_square_mag_behav/xsimk.exe\"   \"xsim.dir/tb_square_mag_behav/obj/xsim_0.win64.obj\" \"xsim.dir/tb_square_mag_behav/obj/xsim_1.win64.obj\" \"F:\\Xilinx\\Vivado\\2017.4\\lib\\win64.o\\\\librdi_simulator_kernel.dll\" \"F:\\Xilinx\\Vivado\\2017.4\\lib\\win64.o\\\\librdi_simbridge_kernel.dll\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

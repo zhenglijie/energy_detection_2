@@ -160,9 +160,11 @@ FFT
 
 
 
+
+
 ### 2023.9.8
 
-1 使用matlab生成信号：
+**1 使用matlab生成信号：**
 $$
 y = 100 * e^{i * 2 \pi * 100t} + 100 * e^{i * 2 \pi * 200t} + 100 * e^{i * 2 \pi * 300t}
 $$
@@ -170,21 +172,21 @@ $$
 
 采样频率$fs = 1000hz$进行采样，取1024采样点，设输入到fft ip核中的单个数据为s[31:0]，s[31:16]为虚部，s[15:0]为实部，做1024点的FFT运算。
 
-2 fft ip输出结果
+**2 fft ip输出结果**
 
 ![image-20230914185254554](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230914185254554.png)
 
-采用原文的思路，代码，数值大小与matlab计算结果差距较大。
+采用原文的思路、代码，波形、数值大小与都与matlab结果差距较大。
 
-3 存在问题
+**3 存在问题**
 
 **问题1：**计算的数值结果错误。
 
 **问题2：**输入一轮数据没有问题，但是对于连续输入的系统没有控制，导致fft ip采集不到数据了。
 
-原因：
 
-论文中fft ip版本v7.1：
+
+因为论文中fft ip版本v7.1：
 
 ![image-20230914185750685](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230914185750685.png)
 
@@ -192,7 +194,7 @@ $$
 
 ![image-20230914185838584](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230914185838584.png)
 
-信号接口功能差距比较大，直接用源代码无法实现，打算重新设计控制单元。
+信号接口功能差距比较大，直接用原文代码思路无法实现，打算重新设计控制单元。
 
 ![image-20230914190012195](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230914190012195.png)
 
@@ -208,7 +210,7 @@ $$
 
 **存在问题：**
 
-计算结果依然不正确。每一级蝶形运算可能出现溢出，由event_fft_overflow信号可以看出，确实发生了溢出。
+计算结果依然不正确。猜测每一级蝶形运算可能出现溢出，搜索资料得知有一个监控计算溢出的信号，重新设置ip核，由event_fft_overflow信号可以看出，确实发生了溢出。
 
 ![image-20230916120916431](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230916120916431.png)
 
@@ -220,9 +222,9 @@ $$
 
 **matlab结果与fft_ip对比：**
 
-![image-20230920092355608](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230920092355608.png)
+![image-20230921204906782](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230921204906782.png)
 
-没有缩放的结果与matlab计算结果差距较大，因为计算过程中产生了溢出。缩放后的结果*256与matlab运算结果有一点偏差，因为精度的问题。
+没有缩放的结果与matlab计算结果差距较大，因为计算过程中产生了溢出。因为精度的问题，缩放后的结果*256与matlab运算结果有一点偏差，是正常现象。
 
 **FFT运算结果图（实部）**
 
@@ -238,5 +240,11 @@ $$
 
 ![image-20230920093151942](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230920093151942.png)
 
-### 2023.9.20 Square Magnitude Module
+### 2023.9.20 Square Magnitude Modules
+
+公式：`xk_re * xk_re + xk_im * xk_im = xk_sq_m`。
+
+真实值（扩大`1 << 16`倍）：`xk_re * 256 * xk_re  * 256 + xk_im * 256 * xk_im * 256 = xk_sq_m * 256 * 256 = xk_sq_m << 16`。
+
+![image-20230921204801542](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230921204801542.png)
 

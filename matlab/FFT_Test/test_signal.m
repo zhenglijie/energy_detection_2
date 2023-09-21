@@ -39,8 +39,6 @@ xlabel('t');
 ylabel('y');
 grid on
 
-
-
 %fft
 f = (0 : N-1) * (fs / N);
 fft_y = fft(y, N);

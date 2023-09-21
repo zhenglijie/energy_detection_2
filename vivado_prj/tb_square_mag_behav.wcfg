@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_square_mag_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_square_mag" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="480000001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="150"></NameColumnWidth>
+      <ValueColumnWidth column_width="171"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/tb_square_mag/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_square_mag/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_square_mag/xk" type="array">
+      <obj_property name="ElementShortName">xk[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xk[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_square_mag/square_mag_inst/xk_re" type="array">
+      <obj_property name="ElementShortName">xk_re[15:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_re[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_square_mag/square_mag_inst/xk_re_sq" type="array">
+      <obj_property name="ElementShortName">xk_re_sq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_re_sq[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_square_mag/square_mag_inst/xk_im" type="array">
+      <obj_property name="ElementShortName">xk_im[15:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_im[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_square_mag/square_mag_inst/xk_im_sq" type="array">
+      <obj_property name="ElementShortName">xk_im_sq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_im_sq[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_square_mag/xk_sq_m" type="array">
+      <obj_property name="ElementShortName">xk_sq_m[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_sq_m[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_square_mag/dv_fft" type="logic">
+      <obj_property name="ElementShortName">dv_fft</obj_property>
+      <obj_property name="ObjectShortName">dv_fft</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_square_mag/dv_sq_m" type="logic">
+      <obj_property name="ElementShortName">dv_sq_m</obj_property>
+      <obj_property name="ObjectShortName">dv_sq_m</obj_property>
+   </wvobject>
+</wave_config>

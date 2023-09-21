@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../energy_detection_2.srcs/sources_1/new/ffd.v" \
+"../../../../energy_detection_2.srcs/sources_1/new/square_mag.v" \
+"../../../../energy_detection_2.srcs/sim_1/new/tb_square_mag.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

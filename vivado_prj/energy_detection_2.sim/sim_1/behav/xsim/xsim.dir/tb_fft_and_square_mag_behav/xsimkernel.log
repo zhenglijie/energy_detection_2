@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_fft_and_square_mag_behav/xsimk.exe -simmode gui -wdb tb_fft_and_square_mag_behav.wdb -simrunnum 0 -socket 52620
+Design successfully loaded
+Design Loading Memory Usage: 32188 KB (Peak: 32188 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 37472 KB (Peak: 37472 KB)
+Simulation CPU Usage: 5015 ms

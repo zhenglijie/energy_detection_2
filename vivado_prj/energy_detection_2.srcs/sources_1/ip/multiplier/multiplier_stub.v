@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Wed Sep 20 22:06:32 2023
+// Date        : Wed Sep 20 09:56:07 2023
 // Host        : LAPTOP-UV5HGDQN running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               f:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/ip/multiplier/multiplier_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top multiplier -prefix
+//               multiplier_ multiplier_stub.v
 // Design      : multiplier
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1
