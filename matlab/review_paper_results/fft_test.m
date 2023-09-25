@@ -20,7 +20,7 @@ ylabel('y');
 grid on
 
 %fft
-f = (0 : N-1) * (fs / N) / 10000000;
+f = (0 : N-1) * (fs / N);
 fft_y = fft(y, N);
 fft_y = abs(fft_y);
 
