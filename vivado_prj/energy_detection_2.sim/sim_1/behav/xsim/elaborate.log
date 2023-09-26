@@ -1,6 +1,6 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: F:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto adc9240614cb4e4398c3a52524468b6d --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_8 -L c_reg_fd_v12_0_4 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_4 -L xbip_dsp48_addsub_v3_0_4 -L xbip_addsub_v3_0_4 -L c_addsub_v12_0_11 -L xbip_dsp48_acc_v3_0_4 -L xbip_accum_v3_0_4 -L c_accum_v12_0_11 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_accumulator_behav xil_defaultlib.tb_accumulator xil_defaultlib.glbl -log elaborate.log 
+Running: F:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto adc9240614cb4e4398c3a52524468b6d --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_8 -L c_reg_fd_v12_0_4 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_4 -L xbip_dsp48_addsub_v3_0_4 -L xbip_addsub_v3_0_4 -L c_addsub_v12_0_11 -L c_gate_bit_v12_0_4 -L xbip_counter_v3_0_4 -L c_counter_binary_v12_0_11 -L xil_defaultlib -L xbip_dsp48_acc_v3_0_4 -L xbip_accum_v3_0_4 -L c_accum_v12_0_11 -L fifo_generator_v13_2_1 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_energy_detection_module_behav xil_defaultlib.tb_energy_detection_module xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -26,6 +26,21 @@ Compiling package ieee.std_logic_signed
 Compiling package ieee.vital_timing
 Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
+Compiling package c_counter_binary_v12_0_11.c_counter_binary_v12_0_11_viv_co...
+Compiling package xbip_counter_v3_0_4.xbip_counter_v3_0_4_viv_comp
+Compiling package xbip_counter_v3_0_4.xbip_counter_v3_0_4_pkg
+Compiling package c_counter_binary_v12_0_11.c_counter_binary_v12_0_11_pkg
+Compiling package xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv_comp
+Compiling package c_gate_bit_v12_0_4.c_gate_bit_v12_0_4_viv_comp
+Compiling package xbip_counter_v3_0_4.xbip_counter_v3_0_4_hdl_comps
+Compiling module xil_defaultlib.control_unit_detection
+Compiling module xil_defaultlib.control_unit_packing
+Compiling module xil_defaultlib.control_unit_ed
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_bhv_ver_s...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1_CONV_VER(...
+Compiling module fifo_generator_v13_2_1.fifo_generator_vlog_beh(C_COMMON...
+Compiling module fifo_generator_v13_2_1.fifo_generator_v13_2_1(C_COMMON_...
+Compiling module xil_defaultlib.fifo
 Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
 Compiling architecture dsp48e_v of entity unisim.DSP48E [\DSP48E(acascreg=0,alumodereg=0,...]
 Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e_wrapper_v3_0 [\xbip_dsp48e_wrapper_v3_0(preg=1...]
@@ -35,6 +50,19 @@ Compiling architecture synth of entity xbip_accum_v3_0_4.xbip_accum_v3_0_4_viv [
 Compiling architecture synth of entity c_accum_v12_0_11.c_accum_v12_0_11_viv [\c_accum_v12_0_11_viv(c_xdevicef...]
 Compiling architecture xilinx of entity c_accum_v12_0_11.c_accum_v12_0_11 [\c_accum_v12_0_11(c_xdevicefamil...]
 Compiling architecture accumulator_arch of entity xil_defaultlib.accumulator [accumulator_default]
-Compiling module xil_defaultlib.tb_accumulator
+Compiling module xil_defaultlib.ffd_en
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_has_ce=1...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e1_wrapper_v3_0 [\xbip_dsp48e1_wrapper_v3_0(preg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_4.xbip_pipe_v3_0_4_viv [\xbip_pipe_v3_0_4_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_counter_v3_0_4.dsp48_counter [\dsp48_counter(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_counter_v3_0_4.xbip_counter_v3_0_4_viv [\xbip_counter_v3_0_4_viv(c_xdevi...]
+Compiling architecture synth of entity c_counter_binary_v12_0_11.c_counter_binary_v12_0_11_viv [\c_counter_binary_v12_0_11_viv(c...]
+Compiling architecture xilinx of entity c_counter_binary_v12_0_11.c_counter_binary_v12_0_11 [\c_counter_binary_v12_0_11(c_imp...]
+Compiling architecture counter_mod_10_arch of entity xil_defaultlib.counter_mod_10 [counter_mod_10_default]
+Compiling module xil_defaultlib.datapath_unit_ed
+Compiling module xil_defaultlib.ffd
+Compiling module xil_defaultlib.energy_detection_module
+Compiling module xil_defaultlib.tb_energy_detection_module
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_accumulator_behav
+Built simulation snapshot tb_energy_detection_module_behav

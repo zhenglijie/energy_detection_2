@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_energy_detection_module_behav/xsimk.exe -simmode gui -wdb tb_energy_detection_module_behav.wdb -simrunnum 0 -socket 49220
+Design successfully loaded
+Design Loading Memory Usage: 10504 KB (Peak: 10504 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 13504 KB (Peak: 13504 KB)
+Simulation CPU Usage: 280 ms

@@ -23,6 +23,7 @@
 module energy_detection_module(
     input clock,
     input reset,
+    
     input [31:0]xk_sq_m,
     input dv_sq_m,
     output [31:0]xk_sq_m_dt,
@@ -50,8 +51,8 @@ module energy_detection_module(
     wire cnt1_tc;
     wire cnt2_tc;
     
-    assign window_size = 10'd8;
-    assign th_value = 32'd8;
+    assign window_size = 10'd2;
+    assign th_value = 32'd120;
     
     control_unit_ed control_unit_ed_inst(
        .clock(clock),
@@ -70,7 +71,7 @@ module energy_detection_module(
        .end_sig(end_sig),
        .sclr_cnt1(sclr_cnt1),
        .en_cnt1(en_cnt1),
-           .sclr_cnt2(sclr_cnt2),
+       .sclr_cnt2(sclr_cnt2),
        .en_cnt2(en_cnt2),
        .sclr_dres(sclr_dres),
        .en_dres(en_dres)
@@ -104,8 +105,8 @@ module energy_detection_module(
     );
     
     ffd ffd_inst( //dv_sq_m_dt_delayed 
-     .clk((clock)),
-     .rst(reset),
+     .clock((clock)),
+     .reset(reset),
      .d(pop_fout),
      .q(dv_sq_m_dt)
     );

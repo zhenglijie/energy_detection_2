@@ -11,7 +11,6 @@ f1 = 1000000; %1Mhz
 f2 = 50000; %50khz
 y = sin(2 * pi * f2 * t) .* exp(1i * (2 * pi * f1 * t));
 
-
 subplot(3, 1, 1);
 plot(t, y); %ignore img
 title("时域");

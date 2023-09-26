@@ -27,7 +27,7 @@ $$
 
 **阈值计算：**
 
-其中$Q(x) = \cfrac{1}{\sqrt{2\pi}} \int_x^{+\infty} e^{-t^2 / 2}dt$是标准正态分布的右尾函数，又叫互补累计分布函数。
+其中$Q(x) = \cfrac{1}{\sqrt{2\pi}} \int_x^{+\infty} e^{-t^2 / 2}dt$是标准正态分布的右尾函数，又叫互补累计分布函数，$erfx(x)$为互补误差函数。
 
 ![image-20230925114642699](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230925114642699.png)
 
@@ -74,4 +74,14 @@ $erfc(x) = \cfrac{2}{\sqrt{\pi}} \int_x^{\infty} e^{-t^2}dt = 2Q(\sqrt{2}x)$
 
 * 计数器counter_detection：计数子频带用于检测，window_size的大小。
 * 计数器counter_packing：计数子频带用于打包。
+
+
+
+
+
+**9月26 测试energy_detection_module**
+
+输入数据为对$y = 100 * e^{i * 2 \pi * 100t} + 100 * e^{i * 2 \pi * 200t} + 100 * e^{i * 2 \pi * 300t}$采样后，经过FFT与square mag后的数据。
+
+
 

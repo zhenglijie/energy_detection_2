@@ -248,3 +248,31 @@ $$
 
 ![image-20230921204801542](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230921204801542.png)
 
+### 2023.9.20 energy_detection_module（Fixed Threshold）
+
+$y = 100 * e^{i * 2 \pi * 100t} + 100 * e^{i * 2 \pi * 200t} + 100 * e^{i * 2 \pi * 300t}$经过matlab采样后，输入vivado后FFT与square mag后获得的数据输入到模块energy_detection_module中，设$sub-band$大小为$M = 2$，固定阈值为120，结果如下：
+
+![image-20230926220015839](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230926220015839.png)
+
+
+
+**问题：**
+
+（1）$Pf$的取值？
+
+固定阈值计算公式
+$$
+\lambda ^* =& \sigma_w^2(1 + \cfrac{Q^{-1}(P_f)}{\sqrt{N/2}})\cdot\cfrac{M}{N}) \cdot N + \epsilon  \\
+=& \cfrac{M}{N} \sigma_w^2(N + \sqrt{2N}Q^{-1}(Pf)) + \epsilon
+$$
+$Q(x) = \cfrac{1}{\sqrt{2\pi}} \int_x^{+\infty} e^{-t^2 / 2}dt$
+
+$erfc(x) = \cfrac{2}{\sqrt{\pi}} \int_x^{\infty} e^{-t^2}dt = 2Q(\sqrt{2}x)$
+
+$Q^{-1}(x) = \sqrt{2} \, erfc(2x)$
+
+其中$\sigma_w^2$是环境噪声平均功率，$P_f$是虚警概率，$M$是子频带的大小，$N$为$FFT$的大小，$Q^{-1}$是互补累计分布函数的反函数，可以用互补误差函数$erfx(x)$表示，$\epsilon$是定点数运算的的校正因子，固定为10。
+
+（2）实验该如何进行？
+
+原论文里分别讨论了threshold与M，但是我这里设置threshold会比较麻烦。

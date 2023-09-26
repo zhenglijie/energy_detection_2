@@ -56,7 +56,7 @@ module datapath_unit_ed(
     
     //wire Energy Window
     reg [31:0] din_ew;
-    wire [36:0] dout_ew;
+    wire [31:0] dout_ew;
     
     //wire Detection Result
     wire d_res, d_res_d;
@@ -129,7 +129,7 @@ module datapath_unit_ed(
        .clk(clock),
         .en(en_dres),
        .rst(sclr_dres),
-       .d(~dout_ew[36])
+       .d(~dout_ew[31])
       );
       
     always @ (add_subn_ew or dout_fin or th_value) begin:MUX
