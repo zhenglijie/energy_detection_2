@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="10000000fs"></ZoomStartTime>
-      <ZoomEndTime time="30330000001fs"></ZoomEndTime>
-      <Cursor1Time time="18970000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="22740000001fs"></ZoomEndTime>
+      <Cursor1Time time="390000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="136"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="96"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="24" />
    <wvobject fp_name="/tb_energy_detection_module/clock" type="logic">

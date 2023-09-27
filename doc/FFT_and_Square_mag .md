@@ -250,11 +250,15 @@ $$
 
 ### 2023.9.20 energy_detection_module（Fixed Threshold）
 
-$y = 100 * e^{i * 2 \pi * 100t} + 100 * e^{i * 2 \pi * 200t} + 100 * e^{i * 2 \pi * 300t}$经过matlab采样后，输入vivado后FFT与square mag后获得的数据输入到模块energy_detection_module中，设$sub-band$大小为$M = 2$，固定阈值为120，结果如下：
+**单个模块测试**
+
+$y = 100 * e^{i * 2 \pi * 100t} + 100 * e^{i * 2 \pi * 200t} + 100 * e^{i * 2 \pi * 300t}$经过1000hz采样后，输入FFT与square mag模块后获得的数据输入到模块energy_detection_module中，设$sub-band$大小为$M = 3，固定阈值为120，结果如下：
 
 ![image-20230926220015839](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230926220015839.png)
 
+**整体测试**
 
+![image-20230927101426760](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230927101426760.png)
 
 **问题：**
 
@@ -275,4 +279,4 @@ $Q^{-1}(x) = \sqrt{2} \, erfc(2x)$
 
 （2）实验该如何进行？
 
-原论文里分别讨论了threshold与M，但是我这里设置threshold会比较麻烦。
+原论文里分别讨论了$threshold$与$M$对$P_d$的影响，经过100次实验后获得实验结果。
