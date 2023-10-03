@@ -11,17 +11,51 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="7767295fs"></ZoomStartTime>
-      <ZoomEndTime time="154446541fs"></ZoomEndTime>
-      <Cursor1Time time="27390000fs"></Cursor1Time>
+      <ZoomStartTime time="40219374000fs"></ZoomStartTime>
+      <ZoomEndTime time="70539374001fs"></ZoomEndTime>
+      <Cursor1Time time="54219374000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="152"></NameColumnWidth>
+      <NameColumnWidth column_width="143"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="1" />
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/tb_fft_squaremg_ed_fixed/square_mag_inst/dv_fft_1" type="logic">
+      <obj_property name="ElementShortName">dv_fft_1</obj_property>
+      <obj_property name="ObjectShortName">dv_fft_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_squaremg_ed_fixed/energy_detection_module_inst/control_unit_ed_inst/cu_detection/present_state" type="array">
+      <obj_property name="ElementShortName">present_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">present_state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_squaremg_ed_fixed/fft_inst/fft_out_data_real" type="array">
+      <obj_property name="ElementShortName">fft_out_data_real[15:0]</obj_property>
+      <obj_property name="ObjectShortName">fft_out_data_real[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_fft_squaremg_ed_fixed/energy_detection_module_inst/datapath_unit_ed_inst/xk_sq_m" type="array">
       <obj_property name="ElementShortName">xk_sq_m[31:0]</obj_property>
       <obj_property name="ObjectShortName">xk_sq_m[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_squaremg_ed_fixed/energy_detection_module_inst/datapath_unit_ed_inst/accumulator_inst/B" type="array">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_squaremg_ed_fixed/energy_detection_module_inst/datapath_unit_ed_inst/d_res" type="logic">
+      <obj_property name="ElementShortName">d_res</obj_property>
+      <obj_property name="ObjectShortName">d_res</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_squaremg_ed_fixed/energy_detection_module_inst/datapath_unit_ed_inst/th_value" type="array">
+      <obj_property name="ElementShortName">th_value[31:0]</obj_property>
+      <obj_property name="ObjectShortName">th_value[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
