@@ -11,19 +11,22 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="43190000000fs"></ZoomStartTime>
-      <ZoomEndTime time="65010000001fs"></ZoomEndTime>
-      <Cursor1Time time="55610000000fs"></Cursor1Time>
+      <ZoomStartTime time="46801833000fs"></ZoomStartTime>
+      <ZoomEndTime time="95651833001fs"></ZoomEndTime>
+      <Cursor1Time time="84551833000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="192"></NameColumnWidth>
+      <NameColumnWidth column_width="149"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="35" />
+   <WVObjectSize size="37" />
    <wave_markers>
-      <marker time="20670000000" label="" />
       <marker time="41130100000" label="" />
       <marker time="65680000000" label="" />
+      <marker time="40000000" label="" />
+      <marker time="111000000" label="" />
+      <marker time="20630000000" label="" />
+      <marker time="84470000000" label="" />
    </wave_markers>
    <wvobject fp_name="/tb_fft/sys_clk" type="logic">
       <obj_property name="ElementShortName">sys_clk</obj_property>
@@ -41,10 +44,15 @@
       <obj_property name="ElementShortName">strobe</obj_property>
       <obj_property name="ObjectShortName">strobe</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_fft/fft_inst/control_fft_inst/en_counter" type="logic">
+      <obj_property name="ElementShortName">en_counter</obj_property>
+      <obj_property name="ObjectShortName">en_counter</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_fft/ram_in_data" type="array">
       <obj_property name="ElementShortName">ram_in_data[31:0]</obj_property>
       <obj_property name="ObjectShortName">ram_in_data[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_fft/fft_inst/control_fft_inst/addr" type="array">
       <obj_property name="ElementShortName">addr[9:0]</obj_property>
@@ -68,6 +76,7 @@
       <obj_property name="ElementShortName">douta[31:0]</obj_property>
       <obj_property name="ObjectShortName">douta[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_fft/fft_inst/xfft_0_inst/aclk" type="logic">
       <obj_property name="ElementShortName">aclk</obj_property>
@@ -93,6 +102,7 @@
       <obj_property name="ElementShortName">s_axis_data_tdata[31:0]</obj_property>
       <obj_property name="ObjectShortName">s_axis_data_tdata[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_fft/fft_inst/xfft_0_inst/s_axis_data_tvalid" type="logic">
       <obj_property name="ElementShortName">s_axis_data_tvalid</obj_property>
@@ -136,8 +146,7 @@
       <obj_property name="ElementShortName">fft_out_data_real_abs[15:0]</obj_property>
       <obj_property name="ObjectShortName">fft_out_data_real_abs[15:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       <obj_property name="AnalogYRangeMin">-576710</obj_property>
       <obj_property name="AnalogYRRangeMax">389721</obj_property>
       <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
@@ -150,6 +159,10 @@
    <wvobject fp_name="/tb_fft/fft_inst/xfft_0_inst/m_axis_data_tready" type="logic">
       <obj_property name="ElementShortName">m_axis_data_tready</obj_property>
       <obj_property name="ObjectShortName">m_axis_data_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft/fft_inst/control_fft_inst/fft_s_out_data_tready" type="logic">
+      <obj_property name="ElementShortName">fft_s_out_data_tready</obj_property>
+      <obj_property name="ObjectShortName">fft_s_out_data_tready</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_fft/fft_inst/xfft_0_inst/m_axis_data_tlast" type="logic">
       <obj_property name="ElementShortName">m_axis_data_tlast</obj_property>

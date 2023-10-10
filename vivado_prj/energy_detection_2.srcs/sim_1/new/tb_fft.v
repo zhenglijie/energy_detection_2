@@ -30,8 +30,7 @@ module tb_fft();
 
     //read
     initial begin
-        #10
-        fd = $fopen("F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection/matlab/FFT_Test/data_before_fft.txt", "r");
+        fd = $fopen("F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/matlab/FFT_Test/data_before_fft.txt", "r");
         for (i = 0; i < 1024; i = i + 1) begin
             code = $fscanf(fd, "%d", time_domain[i]);
         end
@@ -41,12 +40,12 @@ module tb_fft();
     reg strobe;
     
     initial begin
-        #40
+        #70
         sys_clk = 1'b1;
         areset <= 1'b1;
-        #60
+        #90
         areset <= 1'b0;
-        strobe <= 1'b1;
+        //strobe <= 1'b1;
     end
 
     always #10 sys_clk = ~sys_clk;
@@ -69,8 +68,10 @@ module tb_fft();
     always @ (posedge sys_clk, posedge areset) begin
         if (areset)
             ram_in_data <= 32'd0;
-        else 
+        else begin
             ram_in_data <= time_domain[addra];
+            strobe <= 1'b1;
+        end
     end
     
     wire fft_m_out_data_tvalid, fft_m_out_data_tlast;
@@ -90,10 +91,6 @@ module tb_fft();
         
     integer fd2, err2;
     reg [640:0]str2;
-    
-    initial begin
-            
-    end
     
 //    always @ (posedge sys_clk, posedge areset) begin
 //        fd2 = $fopen("F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/matlab/FFT_Test/result_fft_ip_unscale.txt", "a");

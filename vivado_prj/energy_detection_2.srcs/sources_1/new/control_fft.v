@@ -52,44 +52,47 @@ module control_fft(
             present_state <= next_state;
     end
     
-    always @ (posedge clk, posedge reset) begin
+    always @ (*) begin
         case(present_state)
             RESET_STATE: //1
                 if (strobe == 1'b1)
                     next_state <= LOAD_FFT_DATA;
                 else
                     next_state <= RESET_STATE;
-            LOAD_FFT_DATA: //3
+            LOAD_FFT_DATA: //2
                 if (tc_counter == 1'b1) //fft load data full
                     next_state <= FFT_PROCESSING;
-            FFT_PROCESSING: //4
+            FFT_PROCESSING: //3
                 if (fft_m_out_data_tlast == 1'b1)
                     next_state <= FFT_FINISH;
-            FFT_FINISH: //5
+            FFT_FINISH: //4
                 if (strobe == 1'b1 && fft_s_out_data_tready == 1'b1)
                     next_state <= LOAD_FFT_DATA;
             default:next_state <= RESET_STATE;
         endcase
     end
     
-    always @ (posedge clk, posedge reset) begin
+    always @ (present_state) begin
+//        fft_s_in_data_tvalid <= 1'b0;
+//        en_counter <= 1'b0;
+//        ram_wr_en <= 1'b0;
         case(present_state) 
             RESET_STATE: begin //1
                 fft_s_in_data_tvalid <= 1'b0;
                 en_counter <= 1'b0;
                 ram_wr_en <= 1'b0;
             end
-            LOAD_FFT_DATA: begin //3
+            LOAD_FFT_DATA: begin //2
                 fft_s_in_data_tvalid <= 1'b1;
                 en_counter <= 1'b1;
                 ram_wr_en <= 1'b1;
             end
-            FFT_PROCESSING: begin //4
+            FFT_PROCESSING: begin //3
                 fft_s_in_data_tvalid <= 1'b1;
                 en_counter <= 1'b1;
                 ram_wr_en <= 1'b1;
             end
-            FFT_FINISH: begin //5
+            FFT_FINISH: begin //4
                 fft_s_in_data_tvalid <= 1'b0;
                 en_counter <= 1'b1;
                 ram_wr_en <= 1'b1;
