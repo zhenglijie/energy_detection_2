@@ -1,6 +1,5 @@
 Vivado Simulator 2017.4
 Time resolution is 1 ps
-Block Memory Generator module tb_fft.fft_inst.ram_inst_0.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Failure: ERROR:add_1 must be in range [-1,DEPTH-1]
-Time: 84540 ns  Iteration: 1
-$finish called at time : 84540 ns : File "F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_fft.v" Line 48
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_rom.rom_32x1024_inst.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.

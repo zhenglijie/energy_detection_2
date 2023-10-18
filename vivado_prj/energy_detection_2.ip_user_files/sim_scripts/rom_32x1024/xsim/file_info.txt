@@ -1,0 +1,2 @@
+rom_32x1024.v,verilog,xil_defaultlib,../../../../energy_detection_2.srcs/sources_1/ip/rom_32x1024/sim/rom_32x1024.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../energy_detection_2.srcs/sources_1/ip/rom_32x1024/sim/rom_32x1024.v" \
+"../../../../energy_detection_2.srcs/sim_1/new/tb_rom.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
