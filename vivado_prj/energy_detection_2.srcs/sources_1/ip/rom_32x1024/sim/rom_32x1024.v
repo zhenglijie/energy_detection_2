@@ -55,17 +55,22 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module rom_32x1024 (
   clka,
+  rsta,
   addra,
-  douta
+  douta,
+  rsta_busy
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK" *)
 input wire clka;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA RST" *)
+input wire rsta;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *)
 input wire [9 : 0] addra;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_WRITE_MODE READ_WRITE" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT" *)
 output wire [31 : 0] douta;
+output wire rsta_busy;
 
   blk_mem_gen_v8_4_1 #(
     .C_FAMILY("zynq"),
@@ -88,7 +93,7 @@ output wire [31 : 0] douta;
     .C_INIT_FILE("rom_32x1024.mem"),
     .C_USE_DEFAULT_DATA(0),
     .C_DEFAULT_DATA("0"),
-    .C_HAS_RSTA(0),
+    .C_HAS_RSTA(1),
     .C_RST_PRIORITY_A("CE"),
     .C_RSTRAM_A(0),
     .C_INITA_VAL("0"),
@@ -136,14 +141,14 @@ output wire [31 : 0] douta;
     .C_EN_RDADDRB_CHG(0),
     .C_EN_DEEPSLEEP_PIN(0),
     .C_EN_SHUTDOWN_PIN(0),
-    .C_EN_SAFETY_CKT(0),
+    .C_EN_SAFETY_CKT(1),
     .C_DISABLE_WARN_BHV_RANGE(0),
     .C_COUNT_36K_BRAM("1"),
     .C_COUNT_18K_BRAM("0"),
-    .C_EST_POWER_SUMMARY("Estimated Power for IP     :     2.622 mW")
+    .C_EST_POWER_SUMMARY("Estimated Power for IP     :     2.6219999999999999 mW")
   ) inst (
     .clka(clka),
-    .rsta(1'D0),
+    .rsta(rsta),
     .ena(1'D0),
     .regcea(1'D0),
     .wea(1'B0),
@@ -167,7 +172,7 @@ output wire [31 : 0] douta;
     .sleep(1'D0),
     .deepsleep(1'D0),
     .shutdown(1'D0),
-    .rsta_busy(),
+    .rsta_busy(rsta_busy),
     .rstb_busy(),
     .s_aclk(1'H0),
     .s_aresetn(1'D0),

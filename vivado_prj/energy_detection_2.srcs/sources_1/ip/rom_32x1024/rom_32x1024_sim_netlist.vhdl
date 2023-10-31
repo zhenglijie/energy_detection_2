@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Wed Oct 18 18:44:10 2023
+-- Date        : Sun Oct 22 19:54:02 2023
 -- Host        : LAPTOP-UV5HGDQN running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top rom_32x1024 -prefix
---               rom_32x1024_ rom_32x1024_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/ip/rom_32x1024/rom_32x1024_sim_netlist.vhdl
 -- Design      : rom_32x1024
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,9 +17,14 @@ use UNISIM.VCOMPONENTS.ALL;
 entity rom_32x1024_blk_mem_gen_prim_wrapper_init is
   port (
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    ram_rstram_a : out STD_LOGIC;
     clka : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    rsta : in STD_LOGIC;
+    POR_A : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of rom_32x1024_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end rom_32x1024_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of rom_32x1024_blk_mem_gen_prim_wrapper_init is
@@ -27,6 +32,7 @@ architecture STRUCTURE of rom_32x1024_blk_mem_gen_prim_wrapper_init is
   signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_86\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_87\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_88\ : STD_LOGIC;
+  signal \^ram_rstram_a\ : STD_LOGIC;
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
@@ -38,6 +44,7 @@ architecture STRUCTURE of rom_32x1024_blk_mem_gen_prim_wrapper_init is
   attribute box_type : string;
   attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
+  ram_rstram_a <= \^ram_rstram_a\;
 \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 0,
@@ -247,13 +254,22 @@ begin
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
       REGCEB => '0',
-      RSTRAMARSTRAM => '0',
-      RSTRAMB => '0',
+      RSTRAMARSTRAM => \^ram_rstram_a\,
+      RSTRAMB => \^ram_rstram_a\,
       RSTREGARSTREG => '0',
       RSTREGB => '0',
       SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
       WEA(3 downto 0) => B"0000",
       WEBWE(7 downto 0) => B"00000000"
+    );
+\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => rsta,
+      I1 => POR_A,
+      O => \^ram_rstram_a\
     );
 end STRUCTURE;
 library IEEE;
@@ -263,18 +279,134 @@ use UNISIM.VCOMPONENTS.ALL;
 entity rom_32x1024_blk_mem_gen_prim_width is
   port (
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    rsta_busy : out STD_LOGIC;
     clka : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    rsta : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of rom_32x1024_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end rom_32x1024_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of rom_32x1024_blk_mem_gen_prim_width is
+  signal ENA_dly : STD_LOGIC;
+  signal ENA_dly_D : STD_LOGIC;
+  signal POR_A : STD_LOGIC;
+  signal RSTA_SHFT_REG : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal \SAFETY_CKT_GEN.POR_A_i_1_n_0\ : STD_LOGIC;
+  signal \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3_n_0\ : STD_LOGIC;
+  signal ram_rstram_a : STD_LOGIC;
+  signal \ram_rstram_a_busy__0\ : STD_LOGIC;
+  attribute srl_bus_name : string;
+  attribute srl_bus_name of \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3\ : label is "U0/\inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg ";
+  attribute srl_name : string;
+  attribute srl_name of \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3\ : label is "U0/\inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3 ";
 begin
+\SAFETY_CKT_GEN.ENA_NO_REG.ENA_dly_D_reg\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => ENA_dly,
+      Q => ENA_dly_D,
+      R => '0'
+    );
+\SAFETY_CKT_GEN.ENA_NO_REG.ENA_dly_reg\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => ram_rstram_a,
+      Q => ENA_dly,
+      R => '0'
+    );
+\SAFETY_CKT_GEN.POR_A_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => RSTA_SHFT_REG(4),
+      I1 => RSTA_SHFT_REG(0),
+      O => \SAFETY_CKT_GEN.POR_A_i_1_n_0\
+    );
+\SAFETY_CKT_GEN.POR_A_reg\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => \SAFETY_CKT_GEN.POR_A_i_1_n_0\,
+      Q => POR_A,
+      R => '0'
+    );
+\SAFETY_CKT_GEN.RSTA_BUSY_NO_REG.RSTA_BUSY_reg\: unisim.vcomponents.FDRE
+     port map (
+      C => clka,
+      CE => '1',
+      D => \ram_rstram_a_busy__0\,
+      Q => rsta_busy,
+      R => '0'
+    );
+\SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => '1',
+      Q => RSTA_SHFT_REG(0),
+      R => '0'
+    );
+\SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3\: unisim.vcomponents.SRL16E
+    generic map(
+      INIT => X"0000"
+    )
+        port map (
+      A0 => '0',
+      A1 => '1',
+      A2 => '0',
+      A3 => '0',
+      CE => '1',
+      CLK => clka,
+      D => RSTA_SHFT_REG(0),
+      Q => \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3_n_0\
+    );
+\SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clka,
+      CE => '1',
+      D => \SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3_n_0\,
+      Q => RSTA_SHFT_REG(4),
+      R => '0'
+    );
 \prim_init.ram\: entity work.rom_32x1024_blk_mem_gen_prim_wrapper_init
      port map (
+      POR_A => POR_A,
       addra(9 downto 0) => addra(9 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0)
+      douta(31 downto 0) => douta(31 downto 0),
+      ram_rstram_a => ram_rstram_a,
+      rsta => rsta
+    );
+ram_rstram_a_busy: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => ENA_dly_D,
+      I1 => rsta,
+      I2 => POR_A,
+      I3 => ENA_dly,
+      O => \ram_rstram_a_busy__0\
     );
 end STRUCTURE;
 library IEEE;
@@ -284,9 +416,13 @@ use UNISIM.VCOMPONENTS.ALL;
 entity rom_32x1024_blk_mem_gen_generic_cstr is
   port (
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    rsta_busy : out STD_LOGIC;
     clka : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    rsta : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of rom_32x1024_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end rom_32x1024_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of rom_32x1024_blk_mem_gen_generic_cstr is
@@ -295,7 +431,9 @@ begin
      port map (
       addra(9 downto 0) => addra(9 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0)
+      douta(31 downto 0) => douta(31 downto 0),
+      rsta => rsta,
+      rsta_busy => rsta_busy
     );
 end STRUCTURE;
 library IEEE;
@@ -305,9 +443,13 @@ use UNISIM.VCOMPONENTS.ALL;
 entity rom_32x1024_blk_mem_gen_top is
   port (
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    rsta_busy : out STD_LOGIC;
     clka : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    rsta : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of rom_32x1024_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end rom_32x1024_blk_mem_gen_top;
 
 architecture STRUCTURE of rom_32x1024_blk_mem_gen_top is
@@ -316,7 +458,9 @@ begin
      port map (
       addra(9 downto 0) => addra(9 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0)
+      douta(31 downto 0) => douta(31 downto 0),
+      rsta => rsta,
+      rsta_busy => rsta_busy
     );
 end STRUCTURE;
 library IEEE;
@@ -326,9 +470,13 @@ use UNISIM.VCOMPONENTS.ALL;
 entity rom_32x1024_blk_mem_gen_v8_4_1_synth is
   port (
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    rsta_busy : out STD_LOGIC;
     clka : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    rsta : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of rom_32x1024_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end rom_32x1024_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of rom_32x1024_blk_mem_gen_v8_4_1_synth is
@@ -337,7 +485,9 @@ begin
      port map (
       addra(9 downto 0) => addra(9 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0)
+      douta(31 downto 0) => douta(31 downto 0),
+      rsta => rsta,
+      rsta_busy => rsta_busy
     );
 end STRUCTURE;
 library IEEE;
@@ -451,13 +601,13 @@ entity rom_32x1024_blk_mem_gen_v8_4_1 is
   attribute C_EN_RDADDRB_CHG : integer;
   attribute C_EN_RDADDRB_CHG of rom_32x1024_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_EN_SAFETY_CKT : integer;
-  attribute C_EN_SAFETY_CKT of rom_32x1024_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_EN_SAFETY_CKT of rom_32x1024_blk_mem_gen_v8_4_1 : entity is 1;
   attribute C_EN_SHUTDOWN_PIN : integer;
   attribute C_EN_SHUTDOWN_PIN of rom_32x1024_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of rom_32x1024_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of rom_32x1024_blk_mem_gen_v8_4_1 : entity is "Estimated Power for IP     :     2.622 mW";
+  attribute C_EST_POWER_SUMMARY of rom_32x1024_blk_mem_gen_v8_4_1 : entity is "Estimated Power for IP     :     2.6219999999999999 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of rom_32x1024_blk_mem_gen_v8_4_1 : entity is "zynq";
   attribute C_HAS_AXI_ID : integer;
@@ -481,7 +631,7 @@ entity rom_32x1024_blk_mem_gen_v8_4_1 is
   attribute C_HAS_REGCEB : integer;
   attribute C_HAS_REGCEB of rom_32x1024_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_RSTA : integer;
-  attribute C_HAS_RSTA of rom_32x1024_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_RSTA of rom_32x1024_blk_mem_gen_v8_4_1 : entity is 1;
   attribute C_HAS_RSTB : integer;
   attribute C_HAS_RSTB of rom_32x1024_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_SOFTECC_INPUT_REGS_A : integer;
@@ -556,6 +706,8 @@ entity rom_32x1024_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B of rom_32x1024_blk_mem_gen_v8_4_1 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of rom_32x1024_blk_mem_gen_v8_4_1 : entity is "zynq";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of rom_32x1024_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of rom_32x1024_blk_mem_gen_v8_4_1 : entity is "yes";
 end rom_32x1024_blk_mem_gen_v8_4_1;
@@ -606,7 +758,6 @@ begin
   rdaddrecc(2) <= \<const0>\;
   rdaddrecc(1) <= \<const0>\;
   rdaddrecc(0) <= \<const0>\;
-  rsta_busy <= \<const0>\;
   rstb_busy <= \<const0>\;
   s_axi_arready <= \<const0>\;
   s_axi_awready <= \<const0>\;
@@ -679,7 +830,9 @@ inst_blk_mem_gen: entity work.rom_32x1024_blk_mem_gen_v8_4_1_synth
      port map (
       addra(9 downto 0) => addra(9 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0)
+      douta(31 downto 0) => douta(31 downto 0),
+      rsta => rsta,
+      rsta_busy => rsta_busy
     );
 end STRUCTURE;
 library IEEE;
@@ -689,8 +842,10 @@ use UNISIM.VCOMPONENTS.ALL;
 entity rom_32x1024 is
   port (
     clka : in STD_LOGIC;
+    rsta : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    douta : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    rsta_busy : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of rom_32x1024 : entity is true;
@@ -704,7 +859,6 @@ end rom_32x1024;
 
 architecture STRUCTURE of rom_32x1024 is
   signal NLW_U0_dbiterr_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_rsta_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_rstb_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi_arready_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi_awready_UNCONNECTED : STD_LOGIC;
@@ -764,13 +918,13 @@ architecture STRUCTURE of rom_32x1024 is
   attribute C_EN_RDADDRB_CHG : integer;
   attribute C_EN_RDADDRB_CHG of U0 : label is 0;
   attribute C_EN_SAFETY_CKT : integer;
-  attribute C_EN_SAFETY_CKT of U0 : label is 0;
+  attribute C_EN_SAFETY_CKT of U0 : label is 1;
   attribute C_EN_SHUTDOWN_PIN : integer;
   attribute C_EN_SHUTDOWN_PIN of U0 : label is 0;
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of U0 : label is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     2.622 mW";
+  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     2.6219999999999999 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "zynq";
   attribute C_HAS_AXI_ID : integer;
@@ -794,7 +948,7 @@ architecture STRUCTURE of rom_32x1024 is
   attribute C_HAS_REGCEB : integer;
   attribute C_HAS_REGCEB of U0 : label is 0;
   attribute C_HAS_RSTA : integer;
-  attribute C_HAS_RSTA of U0 : label is 0;
+  attribute C_HAS_RSTA of U0 : label is 1;
   attribute C_HAS_RSTB : integer;
   attribute C_HAS_RSTB of U0 : label is 0;
   attribute C_HAS_SOFTECC_INPUT_REGS_A : integer;
@@ -874,6 +1028,7 @@ architecture STRUCTURE of rom_32x1024 is
   attribute x_interface_info of clka : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK";
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of clka : signal is "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_WRITE_MODE READ_WRITE";
+  attribute x_interface_info of rsta : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA RST";
   attribute x_interface_info of addra : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR";
   attribute x_interface_info of douta : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT";
 begin
@@ -897,8 +1052,8 @@ U0: entity work.rom_32x1024_blk_mem_gen_v8_4_1
       rdaddrecc(9 downto 0) => NLW_U0_rdaddrecc_UNCONNECTED(9 downto 0),
       regcea => '0',
       regceb => '0',
-      rsta => '0',
-      rsta_busy => NLW_U0_rsta_busy_UNCONNECTED,
+      rsta => rsta,
+      rsta_busy => rsta_busy,
       rstb => '0',
       rstb_busy => NLW_U0_rstb_busy_UNCONNECTED,
       s_aclk => '0',

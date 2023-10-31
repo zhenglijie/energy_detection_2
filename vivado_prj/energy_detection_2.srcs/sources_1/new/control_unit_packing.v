@@ -30,7 +30,7 @@ module control_unit_packing(
     output reg pop_fout
     );
     
-    reg [1:0]present_state, next_state;
+    (* dont_touch = "true" *) reg [1:0]present_state, next_state;
     
     //states definition
     parameter RESET_STATE=3'b000,POP_DATA=3'b001;
@@ -80,8 +80,6 @@ module control_unit_packing(
                 en_cnt2 = 1'b1;
                 pop_fout = 1'b1;
             end
-            
-            default:next_state = RESET_STATE;
         endcase
     end
     

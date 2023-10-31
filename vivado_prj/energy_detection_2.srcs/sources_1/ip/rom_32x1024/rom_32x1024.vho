@@ -55,8 +55,10 @@
 COMPONENT rom_32x1024
   PORT (
     clka : IN STD_LOGIC;
+    rsta : IN STD_LOGIC;
     addra : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    douta : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    douta : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    rsta_busy : OUT STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -68,8 +70,10 @@ END COMPONENT;
 your_instance_name : rom_32x1024
   PORT MAP (
     clka => clka,
+    rsta => rsta,
     addra => addra,
-    douta => douta
+    douta => douta,
+    rsta_busy => rsta_busy
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

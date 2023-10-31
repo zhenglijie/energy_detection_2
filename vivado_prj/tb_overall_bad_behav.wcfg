@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_overall_bad_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_overall_bad" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="137998697000fs"></ZoomStartTime>
+      <ZoomEndTime time="153578697001fs"></ZoomEndTime>
+      <Cursor1Time time="143998697000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="147"></NameColumnWidth>
+      <ValueColumnWidth column_width="149"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/fft_inst/fft_in_data" type="array">
+      <obj_property name="ElementShortName">fft_in_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fft_in_data[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/fft_inst/fft_m_out_data" type="array">
+      <obj_property name="ElementShortName">fft_m_out_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fft_m_out_data[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/square_mag_inst/xk_sq_m" type="array">
+      <obj_property name="ElementShortName">xk_sq_m[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xk_sq_m[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_1/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_1/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_1/din" type="array">
+      <obj_property name="ElementShortName">din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_1/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_1/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_1/dout" type="array">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_1/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_1/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_0/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_0/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_0/din" type="array">
+      <obj_property name="ElementShortName">din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_0/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_0/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_0/dout" type="array">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_0/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_0/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall_bad/energy_detection_fixed_th_inst/energy_detection_module_inst/ffd_inst/q" type="logic">
+      <obj_property name="ElementShortName">q</obj_property>
+      <obj_property name="ObjectShortName">q</obj_property>
+   </wvobject>
+</wave_config>

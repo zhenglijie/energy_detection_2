@@ -36,7 +36,7 @@ module datapath_unit_ed(
     input 	   end_sig,
     input 	   sclr_cnt1,
     input 	   en_cnt1,
-     input 	   sclr_cnt2,
+    input 	   sclr_cnt2,
     input 	   en_cnt2,
     input 	   sclr_dres,
     input 	   en_dres, 
@@ -46,27 +46,27 @@ module datapath_unit_ed(
     output [31:0] xk_sq_m_dt
 );
     //wire fifo input
-    wire [31:0]dout_fin;
-    wire full_fin;
+    (* dont_touch = "true" *)wire [31:0]dout_fin;
+    (* dont_touch = "true" *)wire full_fin;
     
     //wire fifo output
-    wire [31:0] dout_fout;
-    wire full_fout;
-    wire empty_fout;
+    (* dont_touch = "true" *)wire [31:0] dout_fout;
+    (* dont_touch = "true" *)wire full_fout;
+    (* dont_touch = "true" *)wire empty_fout;
     
     //wire Energy Window
-    reg [31:0] din_ew;
-    wire [31:0] dout_ew;
+    (* dont_touch = "true" *)reg [31:0] din_ew;
+    (* dont_touch = "true" *)wire [31:0] dout_ew;
     
     //wire Detection Result
-    wire d_res, d_res_d;
+    (* dont_touch = "true" *)wire d_res, d_res_d;
     
     //wire Counter
-    wire [9:0] cnt1, cnt2;
+    (* dont_touch = "true" *)wire [9:0] cnt1, cnt2;
     
     assign cnt1_tc = (window_size[0] ~^ cnt1[0]) & 
+                     (window_size[1] ~^ cnt1[1]) & 
                      (window_size[2] ~^ cnt1[2]) & 
-                     (window_size[3] ~^ cnt1[3]) &
                      (window_size[3] ~^ cnt1[3]) &
                      (window_size[4] ~^ cnt1[4]) &
                      (window_size[5] ~^ cnt1[5]) &
@@ -76,8 +76,8 @@ module datapath_unit_ed(
                      (window_size[9] ~^ cnt1[9]);
                      
     assign cnt2_tc = (window_size[0] ~^ cnt2[0]) & 
+                     (window_size[1] ~^ cnt2[1]) & 
                      (window_size[2] ~^ cnt2[2]) & 
-                     (window_size[3] ~^ cnt2[3]) &
                      (window_size[3] ~^ cnt2[3]) &
                      (window_size[4] ~^ cnt2[4]) &
                      (window_size[5] ~^ cnt2[5]) &
@@ -86,33 +86,57 @@ module datapath_unit_ed(
                      (window_size[8] ~^ cnt2[8]) &
                      (window_size[9] ~^ cnt2[9]);
     
-    wire full_0, empty_0;
-    wire full_1, empty_1;
+    (* dont_touch = "true" *)wire full_0, empty_0;
+    (* dont_touch = "true" *)wire full_1, empty_1;
     
-    fifo fifo_inst_0 (
-       .clk(clock),                    // input wire clk
-       .srst(sclr_fout),                  // input wire srst
-       .din(dout_fin),                    // input wire [31 : 0] din
-       .wr_en(push_fout),                // input wire wr_en
-       .rd_en(pop_fout),                // input wire rd_en
-       .dout(dout_fout),                  // output wire [31 : 0] dout
-       .full(full_0),                  // output wire full
-       .almost_full(full_fout),    // output wire almost_full
-       .empty(empty_0),                // output wire empty
-       .almost_empty(empty_fout)  // output wire almost_empty
-     );
+    //FIFO OUTPUT
+//    fifo fifo_inst_0 (
+//       .clk(clock),                    // input wire clk
+//       .srst(sclr_fout),                  // input wire srst
+//       .din(dout_fin),                    // input wire [31 : 0] din
+//       .wr_en(push_fout),                // input wire wr_en
+//       .rd_en(pop_fout),                // input wire rd_en
+//       .dout(dout_fout),                  // output wire [31 : 0] dout
+//       .full(full_fout),                  // output wire full
+//       .almost_full(full_0),    // output wire almost_full
+//       .empty(empty_fout),                // output wire empty
+//       .almost_empty(empty_0)  // output wire almost_empty
+//     );
      
-     fifo fifo_inst_1 (
-        .clk(clock),                    // input wire clk
-        .srst(sclr_fin),                  // input wire srst
-        .din(xk_sq_m),                    // input wire [31 : 0] din
-        .wr_en(push_fin),                // input wire wr_en
-        .rd_en(pop_fin),                // input wire rd_en
-        .dout(dout_fin),                  // output wire [31 : 0] dout
-        .full(full_1),                  // output wire full
-        .almost_full(full_fin),    // output wire almost_full
-        .empty(empty_1),                // output wire empty
-        .almost_empty(empty_fin)  // output wire almost_empty
+     fifo fifo_inst_0 (
+         .clk(clock),      // input wire clk
+         .rst(sclr_fout),      // input wire rst
+         .din(dout_fin),      // input wire [31 : 0] din
+         .wr_en(push_fout),  // input wire wr_en
+         .rd_en(pop_fout),  // input wire rd_en
+         .dout(dout_fout),    // output wire [31 : 0] dout
+         .full(full_fout),    // output wire full
+         .empty(empty_fout)  // output wire empty
+       );
+     
+     //FIFO INPUT
+//     fifo fifo_inst_1 (
+//        .clk(clock),                    // input wire clk
+//        .srst(sclr_fin),                  // input wire srst
+//        .din(xk_sq_m),                    // input wire [31 : 0] din
+//        .wr_en(push_fin),                // input wire wr_en
+//        .rd_en(pop_fin),                // input wire rd_en
+//        .dout(dout_fin),                  // output wire [31 : 0] dout
+//        .full(full_fin),                  // output wire full
+//        .almost_full(full_1),    // output wire almost_full
+//        .empty(empty_fin),                // output wire empty
+//        .almost_empty(empty_1)  // output wire almost_empty
+//      );
+      
+      fifo fifo_inst_1 (
+        .clk(clock),      // input wire clk
+        .rst(sclr_fin),      // input wire rst
+        .din(xk_sq_m),      // input wire [31 : 0] din
+        .wr_en(push_fin),  // input wire wr_en
+        .rd_en(pop_fin),  // input wire rd_en
+        .dout(dout_fin),    // output wire [31 : 0] dout
+        .full(full_fin),    // output wire full
+        .empty(empty_fin)  // output wire empty
       );
       
       accumulator accumulator_inst (
@@ -127,7 +151,7 @@ module datapath_unit_ed(
      ffd_en ffd_en_inst(
        .q(d_res),
        .clk(clock),
-        .en(en_dres),
+       .en(en_dres),
        .rst(sclr_dres),
        .d(~dout_ew[31])
       );

@@ -55,7 +55,7 @@ grid on;
 subplot(3, 1, 3);
 plot(f, abs_fft_y);
 title("FFT取绝对值");
-xlabel('f');
+xlabel('f');    
 ylabel('y');
 grid on;
 

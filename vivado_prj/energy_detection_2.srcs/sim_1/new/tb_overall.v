@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -23,12 +23,11 @@
 module tb_overall();
     reg sys_clk;
     reg sys_rst_n;
-    wire led;
     
     initial begin
         sys_clk = 1'b0;
         sys_rst_n <= 1'b0;
-        #20
+        #140
         sys_rst_n <= 1'b1;
     end
     
@@ -36,8 +35,7 @@ module tb_overall();
     
     energy_detection_fixed_th energy_detection_fixed_th_inst(
         .sys_clk(sys_clk),
-        .sys_rst_n(sys_rst_n),
-        .led(led)
+        .sys_rst_n(sys_rst_n)
     );
     
 endmodule

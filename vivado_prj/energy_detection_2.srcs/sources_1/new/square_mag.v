@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -31,7 +31,7 @@ module square_mag(
     output [31:0]xk_sq_m
     );
     
-    wire [31:0]xk_re_sq;
+    (* dont_touch = "true" *) wire [31:0]xk_re_sq;
     multiplier multiplier_inst_0 (  //real
       .CLK(sys_clk),    // input wire CLK
       .A(xk_re),        // input wire [15 : 0] A
@@ -40,7 +40,7 @@ module square_mag(
       .P(xk_re_sq)        // output wire [31 : 0] P
     );
     
-    wire [31:0]xk_im_sq;
+    (* dont_touch = "true" *) wire [31:0]xk_im_sq;
     multiplier multiplier_inst_1 (  //image
       .CLK(sys_clk),    // input wire CLK
       .A(xk_im),        // input wire [15 : 0] A
@@ -57,7 +57,7 @@ module square_mag(
       .S(xk_sq_m)        // output wire [31 : 0] S
     );
     
-    wire dv_fft_1;
+    (* dont_touch = "true" *) wire dv_fft_1;
     ffd ffd_inst_0(
         .clock(sys_clk),  //input
         .reset(areset),  //input

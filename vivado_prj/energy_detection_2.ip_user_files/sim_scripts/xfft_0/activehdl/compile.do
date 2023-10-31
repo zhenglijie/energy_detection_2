@@ -38,6 +38,7 @@ vmap floating_point_v7_0_14 activehdl/floating_point_v7_0_14
 vmap xfft_v9_0_14 activehdl/xfft_v9_0_14
 
 vlog -work xil_defaultlib  -sv2k12 \
+"F:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "F:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -93 \
@@ -90,7 +91,6 @@ vcom -work xfft_v9_0_14 -93 \
 
 vcom -work xil_defaultlib -93 \
 "../../../../energy_detection_2.srcs/sources_1/ip/xfft_0/sim/xfft_0.vhd" \
-
 
 vlog -work xil_defaultlib \
 "glbl.v"

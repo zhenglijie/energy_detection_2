@@ -1,0 +1,543 @@
+
+*** Running vivado
+    with args -log energy_detection_fixed_th.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source energy_detection_fixed_th.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source energy_detection_fixed_th.tcl -notrace
+Command: synth_design -top energy_detection_fixed_th -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14488 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 355.547 ; gain = 103.676
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'energy_detection_fixed_th' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v:23]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v:29]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v:30]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v:33]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v:34]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v:56]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v:57]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v:62]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v:63]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v:76]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v:77]
+INFO: [Synth 8-638] synthesizing module 'fft_t' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:23]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:34]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:35]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:36]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:37]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:49]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:64]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:68]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:70]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:74]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:76]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:78]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:79]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:80]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:83]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:85]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:86]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:87]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:88]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:89]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:100]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:101]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:102]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:103]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:104]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:106]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:108]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:109]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:110]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:111]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:112]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:113]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:114]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:116]
+INFO: [Synth 8-638] synthesizing module 'rom_32x1024' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/rom_32x1024_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'rom_32x1024' (1#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/rom_32x1024_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'xfft_0' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/xfft_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'xfft_0' (2#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/xfft_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'control_unit_fft' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_fft.v:23]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_fft.v:37]
+INFO: [Synth 8-638] synthesizing module 'CU_fft_controller' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/CU_fft_controller.v:23]
+	Parameter RESET_STATE bound to: 3'b000 
+	Parameter START_FFT bound to: 3'b001 
+	Parameter LOAD_FFT bound to: 3'b010 
+	Parameter WAITING_PROCESSING bound to: 3'b011 
+	Parameter UNLOAD_EN bound to: 3'b100 
+	Parameter WAITING_DV bound to: 3'b101 
+	Parameter UNLOAD bound to: 3'b110 
+	Parameter SET_SCALING bound to: 3'b111 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/CU_fft_controller.v:38]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/CU_fft_controller.v:101]
+INFO: [Synth 8-256] done synthesizing module 'CU_fft_controller' (3#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/CU_fft_controller.v:23]
+INFO: [Synth 8-638] synthesizing module 'datapath_fft_controller' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_fft_control.v:23]
+INFO: [Synth 8-638] synthesizing module 'counter_mod_10' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/counter_mod_10_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'counter_mod_10' (4#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/counter_mod_10_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'datapath_fft_controller' (5#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_fft_control.v:23]
+INFO: [Synth 8-256] done synthesizing module 'control_unit_fft' (6#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_fft.v:23]
+INFO: [Synth 8-256] done synthesizing module 'fft_t' (7#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/fft_t.v:23]
+INFO: [Synth 8-638] synthesizing module 'square_mag' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/square_mag.v:23]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/square_mag.v:34]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/square_mag.v:43]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/square_mag.v:60]
+INFO: [Synth 8-638] synthesizing module 'multiplier' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/multiplier_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'multiplier' (8#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/multiplier_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'adder' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/adder_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'adder' (9#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/adder_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ffd' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/ffd.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ffd' (10#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/ffd.v:23]
+INFO: [Synth 8-256] done synthesizing module 'square_mag' (11#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/square_mag.v:23]
+INFO: [Synth 8-638] synthesizing module 'energy_detection_module' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:23]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:33]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:34]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:35]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:36]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:37]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:38]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:39]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:40]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:41]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:42]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:43]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:44]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:45]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:46]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:47]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:48]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:49]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:50]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:51]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:52]
+INFO: [Synth 8-638] synthesizing module 'control_unit_ed' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_ed.v:23]
+INFO: [Synth 8-638] synthesizing module 'control_unit_detection' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_detection.v:23]
+	Parameter RESET_STATE bound to: 4'b0000 
+	Parameter WAIT_DATA bound to: 4'b0001 
+	Parameter ACCUMULATE1 bound to: 4'b0010 
+	Parameter ACCUMULATE2 bound to: 4'b0011 
+	Parameter COMPARE bound to: 4'b0100 
+	Parameter WAIT_COMP bound to: 4'b0101 
+	Parameter END_COMP bound to: 4'b0110 
+	Parameter RESET_ACC bound to: 4'b0111 
+	Parameter ACCUMULATE3 bound to: 4'b1000 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_detection.v:42]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_detection.v:119]
+INFO: [Synth 8-256] done synthesizing module 'control_unit_detection' (12#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_detection.v:23]
+INFO: [Synth 8-638] synthesizing module 'control_unit_packing' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_packing.v:23]
+	Parameter RESET_STATE bound to: 3'b000 
+	Parameter POP_DATA bound to: 3'b001 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_packing.v:33]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_packing.v:74]
+INFO: [Synth 8-256] done synthesizing module 'control_unit_packing' (13#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_packing.v:23]
+INFO: [Synth 8-256] done synthesizing module 'control_unit_ed' (14#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/control_unit_ed.v:23]
+INFO: [Synth 8-638] synthesizing module 'datapath_unit_ed' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:22]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:49]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:50]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:53]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:54]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:55]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:58]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:59]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:62]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:65]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:89]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:90]
+INFO: [Synth 8-638] synthesizing module 'fifo' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/fifo_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fifo' (15#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/fifo_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'accumulator' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/accumulator_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'accumulator' (16#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/realtime/accumulator_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ffd_en' [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/ffd_en.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ffd_en' (17#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/ffd_en.v:23]
+INFO: [Synth 8-256] done synthesizing module 'datapath_unit_ed' (18#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v:22]
+INFO: [Synth 8-256] done synthesizing module 'energy_detection_module' (19#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_module.v:23]
+INFO: [Synth 8-256] done synthesizing module 'energy_detection_fixed_th' (20#1) [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v:23]
+WARNING: [Synth 8-3331] design datapath_unit_ed has unconnected port end_sig
+WARNING: [Synth 8-3331] design CU_fft_controller has unconnected port ready_recv_config
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 407.754 ; gain = 155.883
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 407.754 ; gain = 155.883
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp7/adder_in_context.xdc] for cell 'square_mag_inst/adder_inst'
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp7/adder_in_context.xdc] for cell 'square_mag_inst/adder_inst'
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp8/multiplier_in_context.xdc] for cell 'square_mag_inst/multiplier_inst_0'
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp8/multiplier_in_context.xdc] for cell 'square_mag_inst/multiplier_inst_0'
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp8/multiplier_in_context.xdc] for cell 'square_mag_inst/multiplier_inst_1'
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp8/multiplier_in_context.xdc] for cell 'square_mag_inst/multiplier_inst_1'
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp9/xfft_0_in_context.xdc] for cell 'fft_t_inst/xfft_0_inst'
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp9/xfft_0_in_context.xdc] for cell 'fft_t_inst/xfft_0_inst'
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp10/counter_mod_10_in_context.xdc] for cell 'fft_t_inst/control_unit_fft_inst/datapath_fft_controller_inst/counter_mod_10_inst'
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp10/counter_mod_10_in_context.xdc] for cell 'fft_t_inst/control_unit_fft_inst/datapath_fft_controller_inst/counter_mod_10_inst'
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp10/counter_mod_10_in_context.xdc] for cell 'energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_0'
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp10/counter_mod_10_in_context.xdc] for cell 'energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_0'
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp10/counter_mod_10_in_context.xdc] for cell 'energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_1'
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp10/counter_mod_10_in_context.xdc] for cell 'energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_1'
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp11/fifo_in_context.xdc] for cell 'energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_0'
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp11/fifo_in_context.xdc] for cell 'energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_0'
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp11/fifo_in_context.xdc] for cell 'energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_1'
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp11/fifo_in_context.xdc] for cell 'energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_1'
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp12/accumulator_in_context.xdc] for cell 'energy_detection_module_inst/datapath_unit_ed_inst/accumulator_inst'
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp12/accumulator_in_context.xdc] for cell 'energy_detection_module_inst/datapath_unit_ed_inst/accumulator_inst'
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp13/rom_32x1024_in_context.xdc] for cell 'fft_t_inst/rom_32x1024_inst'
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/.Xil/Vivado-18004-LAPTOP-UV5HGDQN/dcp13/rom_32x1024_in_context.xdc] for cell 'fft_t_inst/rom_32x1024_inst'
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/constrs_1/new/energy_detection_fixed_th.xdc]
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/constrs_1/new/energy_detection_fixed_th.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/constrs_1/new/energy_detection_fixed_th.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/energy_detection_fixed_th_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/energy_detection_fixed_th_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 747.953 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_0' at clock pin 'CLK' is different from the actual clock period '20.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_1' at clock pin 'CLK' is different from the actual clock period '20.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'fft_t_inst/control_unit_fft_inst/datapath_fft_controller_inst/counter_mod_10_inst' at clock pin 'CLK' is different from the actual clock period '20.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'square_mag_inst/multiplier_inst_0' at clock pin 'CLK' is different from the actual clock period '20.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'square_mag_inst/multiplier_inst_1' at clock pin 'CLK' is different from the actual clock period '20.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 749.062 ; gain = 497.191
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 749.062 ; gain = 497.191
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for energy_detection_module_inst/datapath_unit_ed_inst/accumulator_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for energy_detection_module_inst/datapath_unit_ed_inst/fifo_inst_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for fft_t_inst/control_unit_fft_inst/datapath_fft_controller_inst/counter_mod_10_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for fft_t_inst/rom_32x1024_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for fft_t_inst/xfft_0_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for square_mag_inst/adder_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for square_mag_inst/multiplier_inst_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for square_mag_inst/multiplier_inst_1. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 749.062 ; gain = 497.191
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "sclr_fft_core" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "start_fft_core" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "unload_fft_core" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sclr_counter" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 749.062 ; gain = 497.191
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 20    
++---Registers : 
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   6 Input      1 Bit        Muxes := 4     
+	  10 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module CU_fft_controller 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 4     
+Module fft_t 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module ffd 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module control_unit_detection 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 8     
+Module control_unit_packing 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 7     
+Module ffd_en 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module datapath_unit_ed 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 20    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 749.062 ; gain = 497.191
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:41 . Memory (MB): peak = 749.062 ; gain = 497.191
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:42 . Memory (MB): peak = 764.738 ; gain = 512.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:42 . Memory (MB): peak = 766.914 ; gain = 515.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin energy_detection_module_inst/datapath_unit_ed_inst/d_res_d_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin energy_detection_module_inst/datapath_unit_ed_inst/full_0_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin energy_detection_module_inst/datapath_unit_ed_inst/empty_0_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin energy_detection_module_inst/datapath_unit_ed_inst/full_1_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin energy_detection_module_inst/datapath_unit_ed_inst/empty_1_inferred:in0 to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:43 . Memory (MB): peak = 766.914 ; gain = 515.043
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:43 . Memory (MB): peak = 766.914 ; gain = 515.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:43 . Memory (MB): peak = 766.914 ; gain = 515.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:43 . Memory (MB): peak = 766.914 ; gain = 515.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:43 . Memory (MB): peak = 766.914 ; gain = 515.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:43 . Memory (MB): peak = 766.914 ; gain = 515.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |fifo           |         2|
+|2     |accumulator    |         1|
+|3     |counter_mod_10 |         3|
+|4     |rom_32x1024    |         1|
+|5     |xfft_0         |         1|
+|6     |multiplier     |         2|
+|7     |adder          |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+------------------+------+
+|      |Cell              |Count |
++------+------------------+------+
+|1     |accumulator       |     1|
+|2     |adder             |     1|
+|3     |counter_mod_10    |     1|
+|4     |counter_mod_10__1 |     1|
+|5     |counter_mod_10__2 |     1|
+|6     |fifo              |     1|
+|7     |fifo__1           |     1|
+|8     |multiplier        |     1|
+|9     |multiplier__1     |     1|
+|10    |rom_32x1024       |     1|
+|11    |xfft_0            |     1|
+|12    |BUFG              |     1|
+|13    |CARRY4            |    12|
+|14    |LUT1              |   196|
+|15    |LUT2              |    22|
+|16    |LUT3              |    64|
+|17    |LUT4              |    18|
+|18    |LUT5              |     7|
+|19    |LUT6              |     9|
+|20    |FDCE              |    17|
+|21    |FDRE              |     2|
+|22    |FDSE              |     1|
+|23    |IBUF              |     2|
++------+------------------+------+
+
+Report Instance Areas: 
++------+-----------------------------------+------------------------+------+
+|      |Instance                           |Module                  |Cells |
++------+-----------------------------------+------------------------+------+
+|1     |top                                |                        |   686|
+|2     |  energy_detection_module_inst     |energy_detection_module |   239|
+|3     |    control_unit_ed_inst           |control_unit_ed         |    22|
+|4     |      cu_detection                 |control_unit_detection  |    16|
+|5     |      cu_packing                   |control_unit_packing    |     6|
+|6     |    datapath_unit_ed_inst          |datapath_unit_ed        |   169|
+|7     |      ffd_en_inst                  |ffd_en                  |     2|
+|8     |    ffd_inst                       |ffd_1                   |     1|
+|9     |  fft_t_inst                       |fft_t                   |   314|
+|10    |    control_unit_fft_inst          |control_unit_fft        |    34|
+|11    |      CU_fft_controller_inst       |CU_fft_controller       |    22|
+|12    |      datapath_fft_controller_inst |datapath_fft_controller |    12|
+|13    |  square_mag_inst                  |square_mag              |    98|
+|14    |    ffd_inst_0                     |ffd                     |     1|
+|15    |    ffd_inst_1                     |ffd_0                   |     1|
++------+-----------------------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:43 . Memory (MB): peak = 766.914 ; gain = 515.043
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:34 . Memory (MB): peak = 766.914 ; gain = 173.734
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:43 . Memory (MB): peak = 766.914 ; gain = 515.043
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+140 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:47 . Memory (MB): peak = 767.273 ; gain = 527.176
+INFO: [Common 17-1381] The checkpoint 'F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/synth_1/energy_detection_fixed_th.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file energy_detection_fixed_th_utilization_synth.rpt -pb energy_detection_fixed_th_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 767.273 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 31 12:54:27 2023...

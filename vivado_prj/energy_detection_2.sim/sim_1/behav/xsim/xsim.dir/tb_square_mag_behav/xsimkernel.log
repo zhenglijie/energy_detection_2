@@ -1,7 +1,7 @@
-Running: xsim.dir/tb_square_mag_behav/xsimk.exe -simmode gui -wdb tb_square_mag_behav.wdb -simrunnum 0 -socket 61524
+Running: xsim.dir/tb_square_mag_behav/xsimk.exe -simmode gui -wdb tb_square_mag_behav.wdb -simrunnum 0 -socket 51058
 Design successfully loaded
-Design Loading Memory Usage: 10380 KB (Peak: 10380 KB)
-Design Loading CPU Usage: 108 ms
+Design Loading Memory Usage: 10888 KB (Peak: 10888 KB)
+Design Loading CPU Usage: 77 ms
 Simulation completed
-Simulation Memory Usage: 11860 KB (Peak: 11860 KB)
-Simulation CPU Usage: 140 ms
+Simulation Memory Usage: 12644 KB (Peak: 12644 KB)
+Simulation CPU Usage: 171 ms

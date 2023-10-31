@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -39,7 +39,7 @@ module control_unit_detection(
     output reg en_dres
 );
 
-    reg [3:0] present_state, next_state;
+    (* dont_touch = "true" *) reg [3:0] present_state, next_state;
     parameter RESET_STATE = 4'b0000, WAIT_DATA = 4'b0001, ACCUMULATE1 = 4'b0010;
     parameter ACCUMULATE2 = 4'b0011, COMPARE = 4'b0100, WAIT_COMP = 4'b0101, END_COMP = 4'b0110;
     parameter RESET_ACC = 4'b0111, ACCUMULATE3 = 4'b1000;
@@ -163,10 +163,9 @@ module control_unit_detection(
                 en_dres = 1'b1;
             end
             
-            RESET_ACC:
+            RESET_ACC: begin
                 sclr_ew = 1'b1;
-                
-            default:next_state = RESET_STATE;
+            end
         endcase
     end
 endmodule

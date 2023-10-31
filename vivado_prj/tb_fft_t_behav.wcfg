@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_fft_t_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_fft_t" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="6203800000fs"></ZoomStartTime>
+      <ZoomEndTime time="185403800001fs"></ZoomEndTime>
+      <Cursor1Time time="53003800000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="169"></NameColumnWidth>
+      <ValueColumnWidth column_width="161"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="33" />
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/rom_32x1024_inst/clka" type="logic">
+      <obj_property name="ElementShortName">clka</obj_property>
+      <obj_property name="ObjectShortName">clka</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/rom_32x1024_inst/rsta" type="logic">
+      <obj_property name="ElementShortName">rsta</obj_property>
+      <obj_property name="ObjectShortName">rsta</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/rom_32x1024_inst/addra" type="array">
+      <obj_property name="ElementShortName">addra[9:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/rom_32x1024_inst/douta" type="array">
+      <obj_property name="ElementShortName">douta[31:0]</obj_property>
+      <obj_property name="ObjectShortName">douta[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/rom_32x1024_inst/rsta_busy" type="logic">
+      <obj_property name="ElementShortName">rsta_busy</obj_property>
+      <obj_property name="ObjectShortName">rsta_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/aclk" type="logic">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/aresetn" type="logic">
+      <obj_property name="ElementShortName">aresetn</obj_property>
+      <obj_property name="ObjectShortName">aresetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/s_axis_config_tdata" type="array">
+      <obj_property name="ElementShortName">s_axis_config_tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_config_tdata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/s_axis_config_tvalid" type="logic">
+      <obj_property name="ElementShortName">s_axis_config_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_config_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/s_axis_config_tready" type="logic">
+      <obj_property name="ElementShortName">s_axis_config_tready</obj_property>
+      <obj_property name="ObjectShortName">s_axis_config_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/s_axis_data_tdata" type="array">
+      <obj_property name="ElementShortName">s_axis_data_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tdata[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/s_axis_data_tvalid" type="logic">
+      <obj_property name="ElementShortName">s_axis_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/s_axis_data_tready" type="logic">
+      <obj_property name="ElementShortName">s_axis_data_tready</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/s_axis_data_tlast" type="logic">
+      <obj_property name="ElementShortName">s_axis_data_tlast</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/m_axis_data_tdata" type="array">
+      <obj_property name="ElementShortName">m_axis_data_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tdata[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="AnalogYRangeMin">-3.71962e+10</obj_property>
+      <obj_property name="AnalogYRRangeMax">6.18804e+10</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/control_unit_fft_inst/start_fft_core" type="logic">
+      <obj_property name="ElementShortName">start_fft_core</obj_property>
+      <obj_property name="ObjectShortName">start_fft_core</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/control_unit_fft_inst/unload_fft_core" type="logic">
+      <obj_property name="ElementShortName">unload_fft_core</obj_property>
+      <obj_property name="ObjectShortName">unload_fft_core</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/control_unit_fft_inst/CU_fft_controller_inst/present_state" type="array">
+      <obj_property name="ElementShortName">present_state[6:0]</obj_property>
+      <obj_property name="ObjectShortName">present_state[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/control_unit_fft_inst/dv_fft_core" type="logic">
+      <obj_property name="ElementShortName">dv_fft_core</obj_property>
+      <obj_property name="ObjectShortName">dv_fft_core</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/m_axis_data_tuser" type="array">
+      <obj_property name="ElementShortName">m_axis_data_tuser[23:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tuser[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/m_axis_data_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/m_axis_data_tready" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_tready</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/m_axis_data_tlast" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_tlast</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/m_axis_status_tdata" type="array">
+      <obj_property name="ElementShortName">m_axis_status_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_status_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/m_axis_status_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_status_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_status_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/m_axis_status_tready" type="logic">
+      <obj_property name="ElementShortName">m_axis_status_tready</obj_property>
+      <obj_property name="ObjectShortName">m_axis_status_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/event_frame_started" type="logic">
+      <obj_property name="ElementShortName">event_frame_started</obj_property>
+      <obj_property name="ObjectShortName">event_frame_started</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/event_tlast_unexpected" type="logic">
+      <obj_property name="ElementShortName">event_tlast_unexpected</obj_property>
+      <obj_property name="ObjectShortName">event_tlast_unexpected</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/event_tlast_missing" type="logic">
+      <obj_property name="ElementShortName">event_tlast_missing</obj_property>
+      <obj_property name="ObjectShortName">event_tlast_missing</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/event_fft_overflow" type="logic">
+      <obj_property name="ElementShortName">event_fft_overflow</obj_property>
+      <obj_property name="ObjectShortName">event_fft_overflow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/event_status_channel_halt" type="logic">
+      <obj_property name="ElementShortName">event_status_channel_halt</obj_property>
+      <obj_property name="ObjectShortName">event_status_channel_halt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/event_data_in_channel_halt" type="logic">
+      <obj_property name="ElementShortName">event_data_in_channel_halt</obj_property>
+      <obj_property name="ObjectShortName">event_data_in_channel_halt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fft_t/fft_t_inst/xfft_0_inst/event_data_out_channel_halt" type="logic">
+      <obj_property name="ElementShortName">event_data_out_channel_halt</obj_property>
+      <obj_property name="ObjectShortName">event_data_out_channel_halt</obj_property>
+   </wvobject>
+</wave_config>

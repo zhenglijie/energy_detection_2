@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../energy_detection_2.srcs/sources_1/ip/ila_0/sim/ila_0.v" \
+"../../../../energy_detection_2.srcs/sources_1/ip/fifo/sim/fifo.v" \
+"../../../../energy_detection_2.srcs/sources_1/ip/rom_32x1024/sim/rom_32x1024.v" \
+"../../../../energy_detection_2.srcs/sources_1/new/control_unit_detection.v" \
+"../../../../energy_detection_2.srcs/sources_1/new/control_unit_ed.v" \
+"../../../../energy_detection_2.srcs/sources_1/new/control_unit_packing.v" \
+"../../../../energy_detection_2.srcs/sources_1/new/datapath_unit_ed.v" \
+"../../../../energy_detection_2.srcs/sources_1/new/energy_detection_fixed_th.v" \
+"../../../../energy_detection_2.srcs/sources_1/new/energy_detection_module.v" \
+"../../../../energy_detection_2.srcs/sources_1/new/ffd.v" \
+"../../../../energy_detection_2.srcs/sources_1/new/ffd_en.v" \
+"../../../../energy_detection_2.srcs/sources_1/new/fft.v" \
+"../../../../energy_detection_2.srcs/sources_1/new/square_mag.v" \
+"../../../../energy_detection_2.srcs/sim_1/new/tb_overall_bad.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

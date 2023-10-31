@@ -55,9 +55,11 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 rom_32x1024 your_instance_name (
-  .clka(clka),    // input wire clka
-  .addra(addra),  // input wire [9 : 0] addra
-  .douta(douta)  // output wire [31 : 0] douta
+  .clka(clka),            // input wire clka
+  .rsta(rsta),            // input wire rsta
+  .addra(addra),          // input wire [9 : 0] addra
+  .douta(douta),          // output wire [31 : 0] douta
+  .rsta_busy(rsta_busy)  // output wire rsta_busy
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

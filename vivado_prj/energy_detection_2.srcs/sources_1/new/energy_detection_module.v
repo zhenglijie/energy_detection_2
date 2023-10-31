@@ -30,26 +30,26 @@ module energy_detection_module(
     output dv_sq_m_dt
 );
 
-    wire [31:0] th_value;
-    wire [9:0] window_size; 
-    wire pop_fin;
-    wire sclr_fin;
-    wire pop_fout;
-    wire push_fout;
-    wire sclr_fout;
-    wire sclr_ew;
-    wire ce_ew;
-    wire add_subn_ew;
-    wire end_sig;
-    wire sclr_cnt1;
-    wire en_cnt1;
-    wire sclr_cnt2;
-    wire en_cnt2;
-    wire sclr_dres;
-    wire en_dres;
-    wire empty_fin;
-    wire cnt1_tc;
-    wire cnt2_tc;
+    (* dont_touch = "true" *) wire [31:0] th_value;
+    (* dont_touch = "true" *) wire [9:0] window_size; 
+    (* dont_touch = "true" *) wire pop_fin;
+    (* dont_touch = "true" *) wire sclr_fin;
+    (* dont_touch = "true" *) wire pop_fout;
+    (* dont_touch = "true" *) wire push_fout;
+    (* dont_touch = "true" *) wire sclr_fout;
+    (* dont_touch = "true" *) wire sclr_ew;
+    (* dont_touch = "true" *) wire ce_ew;
+    (* dont_touch = "true" *) wire add_subn_ew;
+    (* dont_touch = "true" *) wire end_sig;
+    (* dont_touch = "true" *) wire sclr_cnt1;
+    (* dont_touch = "true" *) wire en_cnt1;
+    (* dont_touch = "true" *) wire sclr_cnt2;
+    (* dont_touch = "true" *) wire en_cnt2;
+    (* dont_touch = "true" *) wire sclr_dres;
+    (* dont_touch = "true" *) wire en_dres;
+    (* dont_touch = "true" *) wire empty_fin;
+    (* dont_touch = "true" *) wire cnt1_tc;
+    (* dont_touch = "true" *) wire cnt2_tc;
     
     assign window_size = 10'd2;
     assign th_value = 32'd120;
