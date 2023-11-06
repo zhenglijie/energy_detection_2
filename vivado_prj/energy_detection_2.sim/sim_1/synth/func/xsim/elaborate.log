@@ -8,16 +8,17 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.FDRE_default
 Compiling module unisims_ver.LUT5
 Compiling module unisims_ver.LUT6
 Compiling module unisims_ver.x_lut3_mux8
 Compiling module unisims_ver.LUT3
 Compiling module unisims_ver.FDCE_default
 Compiling module xil_defaultlib.control_unit_detection
-Compiling module unisims_ver.x_lut1_mux2
-Compiling module unisims_ver.LUT1
 Compiling module unisims_ver.x_lut2_mux4
 Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
 Compiling module xil_defaultlib.control_unit_packing
 Compiling module xil_defaultlib.control_unit_ed
 Compiling module unisims_ver.DSP48E1(ACASCREG=0,ADREG=0,ALUMO...
@@ -39,7 +40,6 @@ Compiling module xil_defaultlib.counter_mod_10_c_counter_binary_...
 Compiling module xil_defaultlib.counter_mod_10
 Compiling module xil_defaultlib.ffd_en
 Compiling module unisims_ver.FDRE(INIT=1'b1)
-Compiling module unisims_ver.FDRE_default
 Compiling module unisims_ver.SRL16E_default
 Compiling module unisims_ver.FDPE(INIT=1'b0)
 Compiling module xil_defaultlib.fifo_reset_builtin

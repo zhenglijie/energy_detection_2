@@ -53,7 +53,7 @@ module control_unit_detection(
     end
     
     //next_state update
-    always @ (empty_fin, cnt1_tc, present_state) begin
+    always @ (*) begin
         case(present_state)
             RESET_STATE:begin
                 if (empty_fin == 1'b1)
@@ -102,69 +102,69 @@ module control_unit_detection(
         endcase
     end
     
-    always @ (present_state) begin
-        pop_fin = 1'b0;
-        sclr_fin = 1'b0;
-        push_fout = 1'b0;
-        sclr_fout = 1'b0;
-        sclr_ew = 1'b0;
-        ce_ew = 1'b0;
-        add_subn_ew = 1'b0;
-        end_sig = 1'b0;
-        sclr_cnt1 = 1'b0;
-        en_cnt1 = 1'b0;
-        sclr_dres = 1'b0;
-        en_dres = 1'b0;
+    always @ (posedge clock) begin // present_state
+        pop_fin <= 1'b0;
+        sclr_fin <= 1'b0;
+        push_fout <= 1'b0;
+        sclr_fout <= 1'b0;
+        sclr_ew <= 1'b0;
+        ce_ew <= 1'b0;
+        add_subn_ew <= 1'b0;
+        end_sig <= 1'b0;
+        sclr_cnt1 <= 1'b0;
+        en_cnt1 <= 1'b0;
+        sclr_dres <= 1'b0;
+        en_dres <= 1'b0;
         
-        case(present_state)
+        case(next_state)    // present_state
             RESET_STATE:begin
-                sclr_fin = 1'b1;
-                sclr_fout = 1'b1;
-                sclr_ew = 1'b1;
-                sclr_cnt1 = 1'b1;
-                sclr_dres = 1'b1;
+                sclr_fin <= 1'b1;
+                sclr_fout <= 1'b1;
+                sclr_ew <= 1'b1;
+                sclr_cnt1 <= 1'b1;
+                sclr_dres <= 1'b1;
             end
             
             WAIT_DATA:
-                end_sig = 0;
+                end_sig <= 0;
                 
             ACCUMULATE1:begin
-                pop_fin = 1'b1;
-                en_cnt1 = 1'b1;
-                add_subn_ew = 1'b1;
+                pop_fin <= 1'b1;
+                en_cnt1 <= 1'b1;
+                add_subn_ew <= 1'b1;
             end
             
             ACCUMULATE2:begin
-                ce_ew= 1'b1;
-                push_fout= 1'b1;
-                pop_fin = 1'b1;
-                en_cnt1 = 1'b1;
-                add_subn_ew = 1'b1;
+                ce_ew <= 1'b1;
+                push_fout <= 1'b1;
+                pop_fin <= 1'b1;
+                en_cnt1 <= 1'b1;
+                add_subn_ew <= 1'b1;
             end
             
             ACCUMULATE3:begin
-                ce_ew = 1'b1;
-                push_fout = 1'b1;
-                add_subn_ew = 1'b1;
+                ce_ew <= 1'b1;
+                push_fout <= 1'b1;
+                add_subn_ew <= 1'b1;
             end
             
             COMPARE:begin
-                ce_ew = 1'b1;
-                add_subn_ew = 1'b0;
+                ce_ew <= 1'b1;
+                add_subn_ew <= 1'b0;
             end
             
             WAIT_COMP:begin
-                sclr_cnt1 = 1'b1;
-                ce_ew = 1'b1;
+                sclr_cnt1 <= 1'b1;
+                ce_ew <= 1'b1;
             end
             
             END_COMP:begin
-                end_sig = 1'b1;
-                en_dres = 1'b1;
+                end_sig <= 1'b1;
+                en_dres <= 1'b1;
             end
             
             RESET_ACC: begin
-                sclr_ew = 1'b1;
+                sclr_ew <= 1'b1;
             end
         endcase
     end

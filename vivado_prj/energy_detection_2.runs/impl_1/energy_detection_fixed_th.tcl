@@ -60,8 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -82,6 +80,7 @@ set rc [catch {
   read_ip -quiet F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/ip/counter_mod_10/counter_mod_10.xci
   read_ip -quiet F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/ip/fifo/fifo.xci
   read_ip -quiet F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/ip/accumulator/accumulator.xci
+  read_ip -quiet F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/ip/ila_0/ila_0.xci
   read_ip -quiet F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/ip/rom_32x1024/rom_32x1024.xci
   read_xdc F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/constrs_1/new/energy_detection_fixed_th.xdc
   link_design -top energy_detection_fixed_th -part xc7z010clg400-1
@@ -153,6 +152,25 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  catch { write_mem_info -force energy_detection_fixed_th.mmi }
+  write_bitstream -force energy_detection_fixed_th.bit 
+  catch {write_debug_probes -quiet -force energy_detection_fixed_th}
+  catch {file copy -force energy_detection_fixed_th.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

@@ -35,6 +35,8 @@ module CU_fft_controller(
     output reg sclr_counter
     );
     
+    initial sclr_fft_core = 1'b0;
+    
     (* dont_touch = "true" *)reg [6:0] present_state, next_state;
     
     //state definition
@@ -90,18 +92,18 @@ module CU_fft_controller(
     end
     
     //output generation
-    always @ (present_state) begin
-        sclr_fft_core = 1;
-        start_fft_core = 0; 
-        unload_fft_core = 0;
-        en_counter = 0;
-        sclr_counter = 0;
+    always @ (posedge clock) begin // :present_state
+        sclr_fft_core <= 1;
+        start_fft_core <= 0; 
+        unload_fft_core <= 0;
+        en_counter <= 0;
+        sclr_counter <= 0;
         //scale_sch_we_fft_core = 0;
         
-        case(present_state)
+        case(next_state) //:present_state
             RESET_STATE:begin
-                sclr_counter = 1'b1;
-                sclr_fft_core = 1'b0;
+                sclr_counter <= 1'b1;
+                sclr_fft_core <= 1'b0;
             end
             
             SET_SCALING: begin
@@ -109,16 +111,17 @@ module CU_fft_controller(
             end
             
             START_FFT:begin
-                start_fft_core = 1'b1;
-                en_counter = 1'b1;
+                start_fft_core <= 1'b1;
+                en_counter <= 1'b1;
             end
             
             LOAD_FFT: begin
-                start_fft_core = 1'b1;
-                en_counter = 1'b1;
+                start_fft_core <= 1'b1;
+                en_counter <= 1'b1;
             end
-            UNLOAD:
-                unload_fft_core = 1'b1;
+            UNLOAD: begin
+                unload_fft_core <= 1'b1;
+            end
         endcase
     end
     

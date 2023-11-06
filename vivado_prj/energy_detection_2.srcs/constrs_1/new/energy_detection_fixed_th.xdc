@@ -6,8 +6,12 @@ set_property PACKAGE_PIN N15 [get_ports sys_rst_n]
 
 create_clock -period 20.000 -name sys_clk [get_ports sys_clk]
 
+set_input_delay -clock sys_clk -max 2 [get_ports sys_rst_n]
+set_input_delay -clock sys_clk -min 1 [get_ports sys_rst_n]
 
 set_false_path -from [get_ports sys_rst_n]
+
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets sys_rst_n_IBUF]
 
 #set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 #set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]

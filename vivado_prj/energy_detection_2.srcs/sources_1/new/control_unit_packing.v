@@ -43,7 +43,7 @@ module control_unit_packing(
             present_state <= next_state ;
     end
     
-    always @ (end_sig, cnt2_tc, present_state) begin
+    always @ (*) begin
         case(present_state)
             RESET_STATE:begin
                 if (end_sig == 1)
@@ -67,18 +67,18 @@ module control_unit_packing(
         endcase
     end
     
-    always @ (present_state) begin
-        sclr_cnt2 = 1'b0;
-        en_cnt2 = 1'b0;
-        pop_fout = 1'b0;
-        case(present_state)
+    always @ (posedge clock) begin
+        sclr_cnt2 <= 1'b0;
+        en_cnt2 <= 1'b0;
+        pop_fout <= 1'b0;
+        case(next_state)    // present_state
             RESET_STATE:begin
-                sclr_cnt2 = 1'b1;
+                sclr_cnt2 <= 1'b1;
             end
             
             POP_DATA: begin
-                en_cnt2 = 1'b1;
-                pop_fout = 1'b1;
+                en_cnt2 <= 1'b1;
+                pop_fout <= 1'b1;
             end
         endcase
     end

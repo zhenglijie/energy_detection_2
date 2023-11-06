@@ -3,3 +3,5 @@ set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ}
 set_property PACKAGE_PIN U18 [get_ports sys_clk]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N15 [get_ports sys_rst_n]
+set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ} [current_design]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets sys_rst_n_IBUF]
