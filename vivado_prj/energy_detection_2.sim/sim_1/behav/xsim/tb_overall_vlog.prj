@@ -1,6 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../energy_detection_2.srcs/sources_1/ip/ila_0/sim/ila_0.v" \
+"../../../../energy_detection_2.srcs/sources_1/ip/vio_0/sim/vio_0.v" \
 "../../../../energy_detection_2.srcs/sources_1/ip/fifo/sim/fifo.v" \
 "../../../../energy_detection_2.srcs/sources_1/ip/rom_32x1024/sim/rom_32x1024.v" \
 "../../../../energy_detection_2.srcs/sources_1/new/CU_fft_controller.v" \

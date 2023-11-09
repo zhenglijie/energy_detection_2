@@ -519,6 +519,7 @@ Compiling architecture accumulator_arch of entity xil_defaultlib.accumulator [ac
 Compiling module xil_defaultlib.ffd_en
 Compiling module xil_defaultlib.datapath_unit_ed
 Compiling module xil_defaultlib.energy_detection_module
+Compiling module xil_defaultlib.vio_0
 Compiling module xil_defaultlib.ila_0
 Compiling module xil_defaultlib.energy_detection_fixed_th
 Compiling module xil_defaultlib.tb_overall

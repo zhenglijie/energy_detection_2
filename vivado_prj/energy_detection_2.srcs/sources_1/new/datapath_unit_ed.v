@@ -145,8 +145,12 @@ module datapath_unit_ed(
         .ADD(add_subn_ew),    // input wire ADD
         .CE(ce_ew),      // input wire CE
         .SCLR(sclr_ew),  // input wire SCLR
-        .Q(dout_ew)        // output wire [31 : 0] Q
+        .Q(dout_ew)        // output wire [31 : 0] Q  
       );
+     
+     //if dout_ew > 0: dout_ew  = 0 
+     //     energy > threshold
+     //
      
      ffd_en ffd_en_inst(
        .q(d_res),

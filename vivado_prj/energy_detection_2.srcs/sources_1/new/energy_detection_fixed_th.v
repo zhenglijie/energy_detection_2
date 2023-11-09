@@ -76,14 +76,26 @@ module energy_detection_fixed_th(
     (* dont_touch = "true" *)wire [31:0] xk_sq_m_dt;
     (* dont_touch = "true" *)wire dv_sq_m_dt;
     
+    (* dont_touch = "true" *)wire [31:0]th_value;
+    (* dont_touch = "true" *)wire [9:0]window_size;
+    
     energy_detection_module energy_detection_module_inst(
         .clock(sys_clk),        //1 input
         .reset(~sys_rst_n),        //1 input
+        
+        .th_value(th_value),        //32 input
+        .window_size(window_size),      //10 input
         
         .xk_sq_m(xk_sq_m),//[31:0] input
         .dv_sq_m(dv_sq_m),      //1 input
         .xk_sq_m_dt(xk_sq_m_dt),//[31:0] output
         .dv_sq_m_dt(dv_sq_m_dt)      //1 output
+    );
+    
+    vio_0 vio_0_inst (
+      .clk(sys_clk),                // input wire clk
+      .probe_out0(th_value),  // output wire [31 : 0] probe_out0
+      .probe_out1(window_size)  // output wire [9 : 0] probe_out1
     );
     
     ila_0 ila_0_inst (

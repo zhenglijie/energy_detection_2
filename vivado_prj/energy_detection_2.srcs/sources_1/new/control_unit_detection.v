@@ -55,43 +55,43 @@ module control_unit_detection(
     //next_state update
     always @ (*) begin
         case(present_state)
-            RESET_STATE:begin
+            RESET_STATE:begin //0
                 if (empty_fin == 1'b1)
                     next_state = WAIT_DATA;
                 else
                     next_state = ACCUMULATE1;
             end
-            WAIT_DATA:begin
+            WAIT_DATA:begin //1
                 if (empty_fin == 1'b1)
                     next_state = WAIT_DATA;
                 else
                     next_state = ACCUMULATE1;
             end
             
-            ACCUMULATE1:begin
+            ACCUMULATE1:begin //2
                 next_state = ACCUMULATE2;
             end
             
-            ACCUMULATE2:begin
+            ACCUMULATE2:begin //3
                 if (cnt1_tc == 1)
                     next_state = ACCUMULATE3;
                 else
                     next_state = ACCUMULATE2;
             end
             
-            ACCUMULATE3:
+            ACCUMULATE3: //8
                 next_state = COMPARE;
             
-            COMPARE:
+            COMPARE: //4
                 next_state = WAIT_COMP;
                 
-            WAIT_COMP:
+            WAIT_COMP: //5
                 next_state = END_COMP;
             
-            END_COMP:
+            END_COMP: //6
                 next_state = RESET_ACC;
                 
-            RESET_ACC:begin
+            RESET_ACC:begin //7
                 if (empty_fin == 1)
                     next_state = WAIT_DATA;
                 else
@@ -155,7 +155,7 @@ module control_unit_detection(
             
             WAIT_COMP:begin
                 sclr_cnt1 <= 1'b1;
-                ce_ew <= 1'b1;
+                //ce_ew <= 1'b1;
             end
             
             END_COMP:begin

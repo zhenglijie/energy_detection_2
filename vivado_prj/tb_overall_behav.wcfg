@@ -3,23 +3,27 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="tb_overall_time_synth.wdb" id="1">
+      <db_ref path="tb_overall_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="tb_overall" />
+            <top_module name="vcomponents" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="23934000000fs"></ZoomStartTime>
-      <ZoomEndTime time="115934000001fs"></ZoomEndTime>
-      <Cursor1Time time="48833336000fs"></Cursor1Time>
+      <ZoomStartTime time="48518000000fs"></ZoomStartTime>
+      <ZoomEndTime time="49870000001fs"></ZoomEndTime>
+      <Cursor1Time time="49190000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="159"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="125"></NameColumnWidth>
+      <ValueColumnWidth column_width="101"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="35" />
+   <WVObjectSize size="59" />
+   <wave_markers>
+      <marker time="49219700000" label="" />
+   </wave_markers>
    <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/fft_t_inst/xfft_0_inst/aclk" type="logic">
       <obj_property name="ElementShortName">aclk</obj_property>
       <obj_property name="ObjectShortName">aclk</obj_property>
@@ -173,5 +177,108 @@
    <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/d_res" type="logic">
       <obj_property name="ElementShortName">d_res</obj_property>
       <obj_property name="ObjectShortName">d_res</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/vio_0_inst/probe_out0" type="array">
+      <obj_property name="ElementShortName">probe_out0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_out0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/vio_0_inst/probe_out1" type="array">
+      <obj_property name="ElementShortName">probe_out1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">probe_out1[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/ila_0_inst/probe5" type="array">
+      <obj_property name="ElementShortName">probe5[0:0]</obj_property>
+      <obj_property name="ObjectShortName">probe5[0:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/ila_0_inst/probe4" type="array">
+      <obj_property name="ElementShortName">probe4[30:0]</obj_property>
+      <obj_property name="ObjectShortName">probe4[30:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/accumulator_inst/B" type="array">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/accumulator_inst/Q" type="array">
+      <obj_property name="ElementShortName">Q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/ffd_en_inst/d" type="logic">
+      <obj_property name="ElementShortName">d</obj_property>
+      <obj_property name="ObjectShortName">d</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/ffd_en_inst/q" type="logic">
+      <obj_property name="ElementShortName">q</obj_property>
+      <obj_property name="ObjectShortName">q</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/ffd_en_inst/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/accumulator_inst/ADD" type="logic">
+      <obj_property name="ElementShortName">ADD</obj_property>
+      <obj_property name="ObjectShortName">ADD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/accumulator_inst/CE" type="logic">
+      <obj_property name="ElementShortName">CE</obj_property>
+      <obj_property name="ObjectShortName">CE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/window_size" type="array">
+      <obj_property name="ElementShortName">window_size[9:0]</obj_property>
+      <obj_property name="ObjectShortName">window_size[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_0/CE" type="logic">
+      <obj_property name="ElementShortName">CE</obj_property>
+      <obj_property name="ObjectShortName">CE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_0/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_0/Q" type="array">
+      <obj_property name="ElementShortName">Q[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/cnt1_tc" type="logic">
+      <obj_property name="ElementShortName">cnt1_tc</obj_property>
+      <obj_property name="ObjectShortName">cnt1_tc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/sclr_cnt1" type="logic">
+      <obj_property name="ElementShortName">sclr_cnt1</obj_property>
+      <obj_property name="ObjectShortName">sclr_cnt1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_1/CE" type="logic">
+      <obj_property name="ElementShortName">CE</obj_property>
+      <obj_property name="ObjectShortName">CE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_1/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/counter_mod_10_inst_1/Q" type="array">
+      <obj_property name="ElementShortName">Q[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/cnt2_tc" type="logic">
+      <obj_property name="ElementShortName">cnt2_tc</obj_property>
+      <obj_property name="ObjectShortName">cnt2_tc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/datapath_unit_ed_inst/sclr_cnt2" type="logic">
+      <obj_property name="ElementShortName">sclr_cnt2</obj_property>
+      <obj_property name="ObjectShortName">sclr_cnt2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/control_unit_ed_inst/cu_detection/present_state" type="array">
+      <obj_property name="ElementShortName">present_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">present_state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_overall/energy_detection_fixed_th_inst/energy_detection_module_inst/control_unit_ed_inst/cu_detection/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[3:0]</obj_property>
    </wvobject>
 </wave_config>

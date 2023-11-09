@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Mon Nov  6 20:47:09 2023
+| Date             : Tue Nov  7 16:13:34 2023
 | Host             : LAPTOP-UV5HGDQN running 64-bit major release  (build 9200)
 | Command          : report_power -file energy_detection_fixed_th_power_routed.rpt -pb energy_detection_fixed_th_power_summary_routed.pb -rpx energy_detection_fixed_th_power_routed.rpx
 | Design           : energy_detection_fixed_th
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.150        |
+| Total On-Chip Power (W)  | 0.152        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.059        |
+| Dynamic (W)              | 0.060        |
 | Device Static (W)        | 0.091        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 83.3         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.015 |        4 |       --- |             --- |
-| Slice Logic              |     0.009 |    22634 |       --- |             --- |
-|   LUT as Logic           |     0.006 |     5857 |     17600 |           33.28 |
-|   Register               |     0.001 |     9793 |     35200 |           27.82 |
+| Clocks                   |     0.016 |        4 |       --- |             --- |
+| Slice Logic              |     0.009 |    23147 |       --- |             --- |
+|   LUT as Logic           |     0.006 |     5975 |     17600 |           33.95 |
+|   Register               |     0.001 |    10152 |     35200 |           28.84 |
 |   LUT as Shift Register  |    <0.001 |     1485 |      6000 |           24.75 |
 |   CARRY4                 |    <0.001 |      790 |      4400 |           17.95 |
 |   LUT as Distributed RAM |    <0.001 |      184 |      6000 |            3.07 |
-|   F7/F8 Muxes            |    <0.001 |      138 |     17600 |            0.78 |
-|   Others                 |     0.000 |     1955 |       --- |             --- |
-| Signals                  |     0.013 |    14157 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |      137 |     17600 |            0.78 |
+|   Others                 |     0.000 |     1964 |       --- |             --- |
+| Signals                  |     0.013 |    14557 |       --- |             --- |
 | Block RAM                |     0.015 |     15.5 |        60 |           25.83 |
 | DSPs                     |     0.008 |       17 |        80 |           21.25 |
 | I/O                      |    <0.001 |        2 |       100 |            2.00 |
 | Static Power             |     0.091 |          |           |                 |
-| Total                    |     0.150 |          |           |                 |
+| Total                    |     0.152 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.062 |       0.058 |      0.004 |
+| Vccint    |       1.000 |     0.064 |       0.060 |      0.004 |
 | Vccaux    |       1.800 |     0.005 |       0.000 |      0.005 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -153,12 +153,12 @@ Table of Contents
 +----------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                         | Power (W) |
 +----------------------------------------------------------------------------------------------+-----------+
-| energy_detection_fixed_th                                                                    |     0.059 |
+| energy_detection_fixed_th                                                                    |     0.060 |
 |   dbg_hub                                                                                    |     0.002 |
 |     inst                                                                                     |     0.002 |
 |       BSCANID.u_xsdbm_id                                                                     |     0.002 |
 |         CORE_XSDB.UUT_MASTER                                                                 |     0.001 |
-|           U_ICON_INTERFACE                                                                   |    <0.001 |
+|           U_ICON_INTERFACE                                                                   |     0.001 |
 |             U_CMD1                                                                           |    <0.001 |
 |             U_CMD2                                                                           |    <0.001 |
 |             U_CMD3                                                                           |    <0.001 |
@@ -229,6 +229,7 @@ Table of Contents
 |             U_RD_REQ_FLAG                                                                    |    <0.001 |
 |             U_TIMER                                                                          |    <0.001 |
 |           U_XSDB_BUS_MSTR2SL_PORT_IFACE                                                      |    <0.001 |
+|             U_RD_DIN_BUS_MUX                                                                 |    <0.001 |
 |         CORE_XSDB.U_ICON                                                                     |    <0.001 |
 |           U_CMD                                                                              |    <0.001 |
 |           U_STAT                                                                             |    <0.001 |
@@ -296,9 +297,9 @@ Table of Contents
 |             valid.cstr                                                                       |     0.001 |
 |               ramloop[0].ram.r                                                               |     0.001 |
 |                 prim_init.ram                                                                |     0.001 |
-|     xfft_0_inst                                                                              |     0.035 |
-|       U0                                                                                     |     0.035 |
-|         i_synth                                                                              |     0.035 |
+|     xfft_0_inst                                                                              |     0.036 |
+|       U0                                                                                     |     0.036 |
+|         i_synth                                                                              |     0.036 |
 |           axi_wrapper                                                                        |     0.002 |
 |             config_channel_fifo                                                              |    <0.001 |
 |               gen_non_real_time.data_in_fifo_pt1                                             |    <0.001 |
@@ -942,7 +943,7 @@ Table of Contents
 |                   scale_mux                                                                  |    <0.001 |
 |               pe_gen[3].natural_order_input.OVFLO_FIFO                                       |    <0.001 |
 |               pe_gen[3].natural_order_input.PE                                               |     0.006 |
-|                 FW_1.BF_1                                                                    |     0.001 |
+|                 FW_1.BF_1                                                                    |    <0.001 |
 |                   add_subs.add_i                                                             |    <0.001 |
 |                     adder                                                                    |    <0.001 |
 |                       i_baseblox.i_baseblox_addsub                                           |    <0.001 |
@@ -1086,7 +1087,7 @@ Table of Contents
 |                 scaling2bits.scaler_re                                                       |    <0.001 |
 |                   scale_mux                                                                  |    <0.001 |
 |               pe_gen[4].natural_order_input.PE                                               |     0.003 |
-|                 FW_1.BF_1                                                                    |     0.001 |
+|                 FW_1.BF_1                                                                    |    <0.001 |
 |                   add_subs.add_i                                                             |    <0.001 |
 |                     adder                                                                    |    <0.001 |
 |                       i_baseblox.i_baseblox_addsub                                           |    <0.001 |
@@ -1170,9 +1171,9 @@ Table of Contents
 |                   scale_mux                                                                  |    <0.001 |
 |                 scaling2bits.scaler_re                                                       |    <0.001 |
 |                   scale_mux                                                                  |    <0.001 |
-|   ila_0_inst                                                                                 |     0.015 |
-|     inst                                                                                     |     0.015 |
-|       ila_core_inst                                                                          |     0.015 |
+|   ila_0_inst                                                                                 |     0.016 |
+|     inst                                                                                     |     0.016 |
+|       ila_core_inst                                                                          |     0.016 |
 |         ADV_TRIG.u_adv_trig                                                                  |    <0.001 |
 |           fsm_mem_data_reg_r1_0_63_0_2                                                       |    <0.001 |
 |           fsm_mem_data_reg_r1_0_63_12_14                                                     |    <0.001 |
@@ -2322,6 +2323,13 @@ Table of Contents
 |       U0                                                                                     |    <0.001 |
 |         i_mult                                                                               |    <0.001 |
 |           gLUT.gLUT_speed.iLUT                                                               |    <0.001 |
+|   vio_0_inst                                                                                 |    <0.001 |
+|     inst                                                                                     |    <0.001 |
+|       DECODER_INST                                                                           |    <0.001 |
+|       PROBE_OUT_ALL_INST                                                                     |    <0.001 |
+|         G_PROBE_OUT[0].PROBE_OUT0_INST                                                       |    <0.001 |
+|         G_PROBE_OUT[1].PROBE_OUT0_INST                                                       |    <0.001 |
+|       U_XSDB_SLAVE                                                                           |    <0.001 |
 +----------------------------------------------------------------------------------------------+-----------+
 
 

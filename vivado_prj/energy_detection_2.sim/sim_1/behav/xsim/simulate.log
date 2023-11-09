@@ -11,25 +11,6 @@ Note: Actual FIFO Depth = 1024
 Time: 0 ps  Iteration: 0
 Note:  DEPTH = 1024 WIDTH = 36 C_RD_PRIM_WIDTH = 36 C_RD_PRIM_DEPTH = 1024 DEEP = 1 WIDE = 1
 Time: 0 ps  Iteration: 0
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_overall.energy_detection_fixed_th_inst.fft_t_inst.rom_32x1024_inst.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Note: Actual FIFO Depth = 1024
-Time: 0 ps  Iteration: 0
-Note:  DEPTH = 1024 WIDTH = 36 C_RD_PRIM_WIDTH = 36 C_RD_PRIM_DEPTH = 1024 DEEP = 1 WIDE = 1
-Time: 0 ps  Iteration: 0
-Note: Actual FIFO Depth = 1024
-Time: 0 ps  Iteration: 0
-Note:  DEPTH = 1024 WIDTH = 36 C_RD_PRIM_WIDTH = 36 C_RD_PRIM_DEPTH = 1024 DEEP = 1 WIDE = 1
-Time: 0 ps  Iteration: 0
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_overall.energy_detection_fixed_th_inst.fft_t_inst.rom_32x1024_inst.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Note: Actual FIFO Depth = 1024
-Time: 0 ps  Iteration: 0
-Note:  DEPTH = 1024 WIDTH = 36 C_RD_PRIM_WIDTH = 36 C_RD_PRIM_DEPTH = 1024 DEEP = 1 WIDE = 1
-Time: 0 ps  Iteration: 0
-Note: Actual FIFO Depth = 1024
-Time: 0 ps  Iteration: 0
-Note:  DEPTH = 1024 WIDTH = 36 C_RD_PRIM_WIDTH = 36 C_RD_PRIM_DEPTH = 1024 DEEP = 1 WIDE = 1
-Time: 0 ps  Iteration: 0
+Failure: XFFT v8.0: ERROR: ARESETN must be asserted low for a mimimum of 2 clock cycles
+Time: 30 ns  Iteration: 1  Process: /tb_overall/energy_detection_fixed_th_inst/fft_t_inst/xfft_0_inst/U0/i_synth/axi_wrapper/gen_check_aresetn/p_check_reset_length  File: /wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/xfft_v9_0/hdl/xfft_v9_0_vh_rfs.vhd
+$finish called at time : 30 ns : File "F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.srcs/sources_1/new/ffd.v" Line 30

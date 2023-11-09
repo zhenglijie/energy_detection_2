@@ -24,14 +24,17 @@ module energy_detection_module(
     input clock,
     input reset,
     
+    input [31:0]th_value,
+    input [9:0]window_size,
+    
     input [31:0]xk_sq_m,
     input dv_sq_m,
     output [31:0]xk_sq_m_dt,
     output dv_sq_m_dt
 );
 
-    (* dont_touch = "true" *) wire [31:0] th_value;
-    (* dont_touch = "true" *) wire [9:0] window_size; 
+//    (* dont_touch = "true" *) wire [31:0] th_value;
+//    (* dont_touch = "true" *) wire [9:0] window_size; 
     (* dont_touch = "true" *) wire pop_fin;
     (* dont_touch = "true" *) wire sclr_fin;
     (* dont_touch = "true" *) wire pop_fout;
@@ -51,9 +54,9 @@ module energy_detection_module(
     (* dont_touch = "true" *) wire cnt1_tc;
     (* dont_touch = "true" *) wire cnt2_tc;
     
-    assign window_size = 10'd2;
-    assign th_value = 32'd120;
-    
+//    assign window_size = 10'd2;
+//    assign th_value = 32'd120;
+
     control_unit_ed control_unit_ed_inst(
        .clock(clock),
        .reset(reset), 

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Mon Nov  6 20:43:38 2023
+| Date         : Tue Nov  7 16:10:20 2023
 | Host         : LAPTOP-UV5HGDQN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file energy_detection_fixed_th_utilization_synth.rpt -pb energy_detection_fixed_th_utilization_synth.pb
 | Design       : energy_detection_fixed_th
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  317 |     0 |     17600 |  1.80 |
-|   LUT as Logic          |  317 |     0 |     17600 |  1.80 |
+| Slice LUTs*             |  277 |     0 |     17600 |  1.57 |
+|   LUT as Logic          |  277 |     0 |     17600 |  1.57 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
 | Slice Registers         |   34 |     0 |     35200 |  0.10 |
 |   Register as Flip Flop |   34 |     0 |     35200 |  0.10 |
@@ -146,15 +146,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT1     |  196 |                 LUT |
+| LUT1     |  154 |                 LUT |
 | LUT3     |   64 |                 LUT |
+| LUT4     |   25 |                 LUT |
 | LUT2     |   22 |                 LUT |
-| LUT4     |   19 |                 LUT |
 | FDCE     |   17 |        Flop & Latch |
 | FDRE     |   16 |        Flop & Latch |
 | CARRY4   |   12 |          CarryLogic |
-| LUT6     |    9 |                 LUT |
-| LUT5     |    7 |                 LUT |
+| LUT6     |    7 |                 LUT |
+| LUT5     |    5 |                 LUT |
 | IBUF     |    2 |                  IO |
 | FDSE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
@@ -171,6 +171,7 @@ Table of Contents
 | multiplier     |    2 |
 | fifo           |    2 |
 | xfft_0         |    1 |
+| vio_0          |    1 |
 | rom_32x1024    |    1 |
 | ila_0          |    1 |
 | adder          |    1 |
