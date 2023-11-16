@@ -95,9 +95,9 @@ for i = 1:length(Pf) %虚警率
     
             noise = signal_add_noise - signal; %噪声
             noise_energy = sum(abs(noise).^2); %噪声时域能量
-            noise_p = noise_energy / N; %噪声功率
+            noise_p(m, kk) = noise_energy / N; %噪声功率
     
-            threshold(i) = noise_p * (N + sqrt(2 * N) * sqrt(2) * erfcinv(2 * Pf(i))) * N;
+            threshold(i) = noise_p(m, kk) * (N + sqrt(2 * N) * sqrt(2) * erfcinv(2 * Pf(i))) * N;
             
             if signal_add_noise_energy > threshold(i)
                 detect_y(i) = detect_y(i) + 1;
@@ -110,7 +110,7 @@ end
 subplot(5, 1, 5);
 plot(Pf, detect_diff_channel(1, :), '*-b', Pf, detect_diff_channel(2, :), '*-r', ...
     Pf, detect_diff_channel(3, :), '*-g', Pf, detect_diff_channel(4, :), '*-c'); 
-legend('SNR = -20dB','SNR = -15dB', 'SNR = -10dB', 'SNR = 10dB');
+legend('SNR = -25dB','SNR = -20dB', 'SNR = -15dB', 'SNR = 10dB');
 title("100次实验检测次数");
 xlabel("虚警率");
 ylabel("检测次数");

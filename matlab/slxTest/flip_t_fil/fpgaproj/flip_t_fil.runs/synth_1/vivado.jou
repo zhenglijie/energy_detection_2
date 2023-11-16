@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Nov 15 19:44:08 2023
+# Process ID: 17864
+# Current directory: F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/matlab/slxTest/flip_t_fil/fpgaproj/flip_t_fil.runs/synth_1
+# Command line: vivado.exe -log flip_t_fil.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source flip_t_fil.tcl
+# Log file: F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/matlab/slxTest/flip_t_fil/fpgaproj/flip_t_fil.runs/synth_1/flip_t_fil.vds
+# Journal file: F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/matlab/slxTest/flip_t_fil/fpgaproj/flip_t_fil.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source flip_t_fil.tcl -notrace

@@ -6,29 +6,18 @@
   <File Type="ROUTE-PWR-SUM" Name="energy_detection_fixed_th_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="energy_detection_fixed_th_reports.tcl"/>
   <File Type="BG-DRC" Name="energy_detection_fixed_th.drc"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="energy_detection_fixed_th_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="energy_detection_fixed_th_timing_summary_init.rpt"/>
-  <File Type="OPT-HWDEF" Name="energy_detection_fixed_th.hwdef"/>
   <File Type="OPT-DCP" Name="energy_detection_fixed_th_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="energy_detection_fixed_th.hwdef"/>
   <File Type="OPT-DRC" Name="energy_detection_fixed_th_drc_opted.rpt"/>
-  <File Type="OPT-TIMING" Name="energy_detection_fixed_th_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="energy_detection_fixed_th_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="energy_detection_fixed_th_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="energy_detection_fixed_th_placed.dcp"/>
   <File Type="PLACE-IO" Name="energy_detection_fixed_th_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="energy_detection_fixed_th_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="energy_detection_fixed_th_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="energy_detection_fixed_th_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="energy_detection_fixed_th_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="energy_detection_fixed_th_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="energy_detection_fixed_th_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="energy_detection_fixed_th_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="energy_detection_fixed_th_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="energy_detection_fixed_th_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="energy_detection_fixed_th_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="energy_detection_fixed_th_drc_physopted.rpt"/>
   <File Type="BG-BIT" Name="energy_detection_fixed_th.bit"/>
-  <File Type="PHYSOPT-TIMING" Name="energy_detection_fixed_th_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="energy_detection_fixed_th_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="energy_detection_fixed_th_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="energy_detection_fixed_th_routed_bb.dcp"/>
@@ -48,18 +37,13 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="energy_detection_fixed_th_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="energy_detection_fixed_th_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="energy_detection_fixed_th_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="energy_detection_fixed_th_incremental_reuse_routed.rpt"/>
   <File Type="RDI-RDI" Name="energy_detection_fixed_th.vdi"/>
   <File Type="ROUTE-CLK" Name="energy_detection_fixed_th_clock_utilization_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="energy_detection_fixed_th_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="energy_detection_fixed_th_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="energy_detection_fixed_th_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="energy_detection_fixed_th_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="energy_detection_fixed_th_timing_summary_postroute_physopted.rpx"/>
   <File Type="BITSTR-NKY" Name="energy_detection_fixed_th.nky"/>
   <File Type="BITSTR-BMM" Name="energy_detection_fixed_th_bd.bmm"/>
   <File Type="BITSTR-MMI" Name="energy_detection_fixed_th.mmi"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="energy_detection_fixed_th.ltx"/>
   <File Type="BITSTR-SYSDEF" Name="energy_detection_fixed_th.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>

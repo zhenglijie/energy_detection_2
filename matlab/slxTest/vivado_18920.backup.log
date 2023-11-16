@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Nov 16 19:17:49 2023
+# Process ID: 18920
+# Current directory: F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/matlab/slxTest
+# Command line: vivado.exe -mode batch -source _vivado_program.cmd
+# Log file: F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/matlab/slxTest/vivado.log
+# Journal file: F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/matlab/slxTest\vivado.jou
+#-----------------------------------------------------------
+source _vivado_program.cmd
+# set chain_position 1
+# open_hw
+# connect_hw_server -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost:3121.
+ Targets(s) ", jsn-JTAG-HS1-210512180081" may be locked by another hw_server.
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 16 19:17:55 2023...

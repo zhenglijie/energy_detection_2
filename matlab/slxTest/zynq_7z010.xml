@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<FPGABoard Version="1.0">
+  <BoardName>zynq_7z010</BoardName>
+  <FPGA Device="xc7z010" Family="Zynq" JTAGChainPosition="2" Package="clg400" Speed="-1" Vendor="Xilinx">
+    <Interface>
+      <Type>Clock</Type>
+      <Parameter ID="ClockType">Single-Ended</Parameter>
+      <Parameter ID="Frequency">50</Parameter>
+      <Signal>
+        <SignalName>Clock</SignalName>
+        <Description>Clock</Description>
+        <Direction>in</Direction>
+        <BitWidth>1</BitWidth>
+        <FPGAPin>U18</FPGAPin>
+        <IOStandard>LVCMOS33</IOStandard>
+      </Signal>
+    </Interface>
+    <Interface>
+      <Type>JTAG</Type>
+      <Parameter ID="User1Cmd">000010</Parameter>
+      <Parameter ID="InstrRegLenBefore">4</Parameter>
+      <Parameter ID="InstrRegLenAfter">0</Parameter>
+      <Parameter ID="TckFrequency">66</Parameter>
+    </Interface>
+    <Interface>
+      <Type>Reset</Type>
+      <Parameter ID="ActiveLevel">Active-Low</Parameter>
+      <Signal>
+        <SignalName>Reset</SignalName>
+        <Description>Reset</Description>
+        <Direction>in</Direction>
+        <BitWidth>1</BitWidth>
+        <FPGAPin>N15</FPGAPin>
+        <IOStandard>LVCMOS33</IOStandard>
+      </Signal>
+    </Interface>
+  </FPGA>
+</FPGABoard>
