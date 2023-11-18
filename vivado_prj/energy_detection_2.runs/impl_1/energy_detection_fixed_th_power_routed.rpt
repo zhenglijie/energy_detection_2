@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Tue Nov  7 16:13:34 2023
+| Date             : Sat Nov 18 12:57:30 2023
 | Host             : LAPTOP-UV5HGDQN running 64-bit major release  (build 9200)
 | Command          : report_power -file energy_detection_fixed_th_power_routed.rpt -pb energy_detection_fixed_th_power_summary_routed.pb -rpx energy_detection_fixed_th_power_routed.rpx
 | Design           : energy_detection_fixed_th
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.064 |       0.060 |      0.004 |
+| Vccint    |       1.000 |     0.064 |       0.059 |      0.004 |
 | Vccaux    |       1.800 |     0.005 |       0.000 |      0.005 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -282,7 +282,7 @@ Table of Contents
 |     ffd_inst                                                                                 |    <0.001 |
 |   fft_t_inst                                                                                 |     0.037 |
 |     control_unit_fft_inst                                                                    |    <0.001 |
-|       CU_fft_controller_inst                                                                 |    <0.001 |
+|       cu_fft_controller_inst                                                                 |    <0.001 |
 |       datapath_fft_controller_inst                                                           |    <0.001 |
 |         counter_mod_10_inst                                                                  |    <0.001 |
 |           U0                                                                                 |    <0.001 |

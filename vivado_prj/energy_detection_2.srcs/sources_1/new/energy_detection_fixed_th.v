@@ -24,7 +24,6 @@ module energy_detection_fixed_th(
     input sys_clk,
     input sys_rst_n //1
 );
-    //fft unit signals
     
     (* dont_touch = "true" *)wire [31:0]fft_m_out_data; 
     (* dont_touch = "true" *)wire fft_m_out_data_tvalid;
@@ -44,13 +43,6 @@ module energy_detection_fixed_th(
         .ovflow(ovflow)             //1 output    test
     );
     
-//    fft fft_inst(
-//        .sys_clk(sys_clk),                     
-//        .areset(~sys_rst_n),                            
-                                             
-//        .fft_m_out_data(fft_m_out_data),       
-//        .fft_m_out_data_tvalid(fft_m_out_data_tvalid)            
-//    );
     
     //sq_m unit signals
     (* dont_touch = "true" *)wire [15:0] xk_re;
@@ -92,25 +84,25 @@ module energy_detection_fixed_th(
         .dv_sq_m_dt(dv_sq_m_dt)      //1 output
     );
     
-//    vio_0 vio_0_inst (
-//      .clk(sys_clk),                // input wire clk
-//      .probe_out0(th_value),  // output wire [31 : 0] probe_out0
-//      .probe_out1(window_size)  // output wire [9 : 0] probe_out1
-//    );
+    vio_0 vio_0_inst (
+      .clk(sys_clk),                // input wire clk
+      .probe_out0(th_value),  // output wire [31 : 0] probe_out0
+      .probe_out1(window_size)  // output wire [9 : 0] probe_out1
+    );
     
-//    ila_0 ila_0_inst (
-//        .clk(sys_clk), // input wire clk
+    ila_0 ila_0_inst (
+        .clk(sys_clk), // input wire clk
         
-//        .probe0(fft_m_out_data), // input wire [31:0]  probe0  fft_out_data
-//        .probe1(xk_re), // input wire [15:0]  probe1 real
-//        .probe2(xk_im), // input wire [15:0]  probe2 img
-//        .probe3(xk_sq_m), // input wire [31:0]  probe3  xk_sq_m
-//        .probe4(xk_sq_m_dt[30:0]), //input wire [30:0] probe4 xk_sq_m_dt
-//        .probe5(xk_sq_m_dt[31]), // input wire [0:0]  probe5 
-//        .probe6(fft_in_data), //input wire [31:0] 
-//        .probe7(dv_sq_m), //input wire [0:0]
-//        .probe8(ovflow),
-//        .probe9(dv_sq_m_dt)
-//    );
+        .probe0(fft_m_out_data), // input wire [31:0]  probe0  fft_out_data
+        .probe1(xk_re), // input wire [15:0]  probe1 real
+        .probe2(xk_im), // input wire [15:0]  probe2 img
+        .probe3(xk_sq_m), // input wire [31:0]  probe3  xk_sq_m
+        .probe4(xk_sq_m_dt[30:0]), //input wire [30:0] probe4 xk_sq_m_dt
+        .probe5(xk_sq_m_dt[31]), // input wire [0:0]  probe5 
+        .probe6(fft_in_data), //input wire [31:0] 
+        .probe7(dv_sq_m), //input wire [0:0]
+        .probe8(ovflow),
+        .probe9(dv_sq_m_dt)
+    );
     
 endmodule

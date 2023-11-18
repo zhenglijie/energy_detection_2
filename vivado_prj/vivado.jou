@@ -2,34 +2,13 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Nov 14 22:48:37 2023
-# Process ID: 23716
+# Start of session at: Sat Nov 18 13:10:26 2023
+# Process ID: 1732
 # Current directory: F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23152 F:\Users\Lenovo\Desktop\fpga_zynq\energy_detection_2\vivado_prj\energy_detection_2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14076 F:\Users\Lenovo\Desktop\fpga_zynq\energy_detection_2\vivado_prj\energy_detection_2.xpr
 # Log file: F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/vivado.log
 # Journal file: F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.xpr
 update_compile_order -fileset sources_1
-open_hw
-connect_hw_server
-open_hw_target
-set_property PROGRAM.FILE {F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/impl_1/energy_detection_fixed_th.bit} [get_hw_devices xc7z010_1]
-set_property PROBES.FILE {F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/impl_1/energy_detection_fixed_th.ltx} [get_hw_devices xc7z010_1]
-set_property FULL_PROBES.FILE {F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/impl_1/energy_detection_fixed_th.ltx} [get_hw_devices xc7z010_1]
-current_hw_device [get_hw_devices xc7z010_1]
-refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
-set_property PROBES.FILE {F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/impl_1/energy_detection_fixed_th.ltx} [get_hw_devices xc7z010_1]
-set_property FULL_PROBES.FILE {F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/impl_1/energy_detection_fixed_th.ltx} [get_hw_devices xc7z010_1]
-set_property PROGRAM.FILE {F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.runs/impl_1/energy_detection_fixed_th.bit} [get_hw_devices xc7z010_1]
-program_hw_devices [get_hw_devices xc7z010_1]
-refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
-display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_inst"}]]
-run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_inst"}]
-wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_inst"}]
-display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_inst"}]]
-run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_inst"}]
-wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_inst"}]
-display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_inst"}]]
-save_wave_config {F:/Users/Lenovo/Desktop/fpga_zynq/energy_detection_2/vivado_prj/energy_detection_2.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
