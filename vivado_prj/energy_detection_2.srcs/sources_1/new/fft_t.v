@@ -63,7 +63,8 @@ module fft_t(
     
     (* dont_touch = "true" *) wire [15:0]s_axis_config_tdata;
      
-    assign s_axis_config_tdata = 16'b00000_01_10_00_11_10_1;
+    //assign s_axis_config_tdata = 16'b00000_01_10_00_11_10_1;
+    assign s_axis_config_tdata = 16'b00000_00_00_00_00_00_0;
     
     (* dont_touch = "true" *) wire m_axis_data_tvalid;
     

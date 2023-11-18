@@ -36,7 +36,7 @@ module control_unit_fft(
     
     (* dont_touch = "true" *) wire tc_counter, en_counter, sclr_counter;
     
-    CU_fft_controller CU_fft_controller_inst(
+    cu_fft_controller cu_fft_controller_inst(
         .clock(clock),  //input
         .reset(reset),  //input
         .ready(ready),  //input

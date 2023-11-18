@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CU_fft_controller(
+module cu_fft_controller(
     input clock,
     input reset,
     input ready,
